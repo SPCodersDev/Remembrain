@@ -19,14 +19,12 @@
         <script src="https://apis.google.com/js/platform.js" async defer></script>
     </head>
     <body>
-        <div class="g-signin2" 
-            data-onsuccess="onSignIn" 
-            data-width = "280"
-            data-height = "60"
-            data-longtitle = "true"
-            data-theme = "dark"
-            style = "border-radius: 10px;">
+        <script src="https://accounts.google.com/gsi/client" async defer></script>
+        <div id="g_id_onload"
+            data-client_id="1047689252141-p8jbno8o4n5dnebqv7koqq5n87v9o2oa.apps.googleusercontent.com"
+            data-callback="handleCredentialResponse">
         </div>
+        <div class="g_id_signin" data-type="standard"></div>
 
         <script src='init.js' async defer></script>
         <script src='script.js' async defer></script>
