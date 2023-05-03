@@ -1,7 +1,22 @@
 .loginBox {
     width: 100vw;
     height: 100vh;
-    
+
     justify-content: center;
     align-items: center;
+}
+
+.loginContent {
+    width: 40vw;
+    height: 30vh;
+
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 1000px) {
+    .loginContent {
+        width: 100vw;
+        height: 40vh;
+    }
 }
