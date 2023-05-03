@@ -7,16 +7,16 @@
 }
 
 .loginContent {
-    width: 40vw;
+    width: 50vw;
     height: 30vh;
 
     justify-content: center;
     align-items: center;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 850px) {
     .loginContent {
         width: 100vw;
-        height: 40vh;
+        height: 50vh;
     }
 }
