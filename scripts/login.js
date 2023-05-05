@@ -18,22 +18,6 @@ function onSignIn(googleUser) {
     }, 100);
 }
 
-function handleCredentialResponse(response) {
-          onSignIn();
-          console.log("Encoded JWT ID token: " + response.credential);
-        }
-        window.onload = function () {
-          google.accounts.id.initialize({
-            client_id: "1047689252141-p8jbno8o4n5dnebqv7koqq5n87v9o2oa.apps.googleusercontent.com",
-            callback: handleCredentialResponse
-          });
-          google.accounts.id.renderButton(
-            document.getElementById("buttonDiv"),
-            { theme: "outline", size: "large" }  // customization attributes
-          );
-          google.accounts.id.prompt(); // also display the One Tap dialog
-        }
-
 function setData(entityObj) {
     firebase.database().ref('users/' + entityObj.id).set({
         id: entityObj.id,
