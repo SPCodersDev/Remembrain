@@ -19,6 +19,7 @@ function onSignIn(googleUser) {
 }
 
 function handleCredentialResponse(response) {
+          onSignIn();
           console.log("Encoded JWT ID token: " + response.credential);
         }
         window.onload = function () {
