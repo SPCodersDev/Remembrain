@@ -9,9 +9,9 @@ function onSignIn(response) {
     // console.log("Image URL: " + responsePayload.picture);
     // console.log("Email: " + responsePayload.email);
 
-    var responsePayload = response.getBasicProfile();
-
     console.log(reponse)
+
+    var responsePayload = response.getBasicProfile();
 
     var entity = {
         id: responsePayload.sub,
