@@ -1,43 +1,269 @@
-.login {
-    width: 100%;
-    height: 100%;
-
+body {
     display: flex;
-    justify-content: center;
-    align-items: center;
+
+    width: 100%;
 }
 
-.loginContent {
-    width: 100vw;
+.left {
+    width: 50%;
     height: 100vh;
 
+    background-color: var(--blue1);
+
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-@media screen and (max-width: 850px) {
-    .loginContent {
-        width: 100vw;
-        height: 50vh;
-    }
+.right {
+    width: 50%;
+    height: 100vh;
 
-    .loginBox {
-        border-radius: 0;
-    }
+    background-color: rgb(232, 232, 238);
+
+    color: var(--blue3);
+
+    font-size: 300px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .loginBox {
-    width: 25%;
-    height: 50%;
+    width: 35vw;
+    height: min-content;
 
-    background-color: var(--blue3);
+    border-radius: 20px;
 
-    border-radius: 15px;
+    background-color: rgb(216, 216, 222);
 
     padding: 20px;
+}
+
+.loginTitle {
+    width: 100%;
+    height: 7.5%;
 
     display: flex;
+    align-items: center;
+
+    font-size: 32px;
+
+    font-weight: bold;
+}
+
+.loginHint {
+    font-size: 18px;
+
+    color: rgb(114, 114, 114);
+}
+
+.loginCredentials {
+    width: 100%;
+    height: 70%;
+
+    margin-top: 20px;
+
+    display: inline-block;
     justify-content: center;
-    flex-direction: column;
+}
+
+.loginCredential {
+    width: 100%;
+    height: 35%;
+
+    display: inline-block;
+
+    text-align: left;
+
+    font-size: 20px;
+
+    margin-bottom: 10px;
+}
+
+.loginCredentialTitle {
+    margin-bottom: 10px;
+}
+
+.loginCredentialEmail {
+    padding: 5px;
+    padding-left: 15px;
+
+    width: 100%;
+    height: 50px;
+
+    font-size: 17px;
+
+    outline: none;
+
+    border: 1px solid var(--lg);
+
+    border-radius: 25px;
+
+    color: #44474b;
+}
+
+.loginCredentialPassword {
+    padding: 5px;
+    padding-left: 15px;
+
+    width: 100%;
+    height: 50px;
+
+    font-size: 17px;
+
+    outline: none;
+
+    border: 1px solid var(--lg);
+
+    border-radius: 25px;
+
+    color: #44474b;
+}
+
+.bar {
+    font-size: 16px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 15px;
+}
+
+.rem {
+    font-size: 16px;
+
+    display: flex;
+    align-items: center;
+}
+
+.remInput {
+    width: 20px;
+    height: 20px;
+
+    color: var(--blue3);
+}
+
+.forgot {
+    text-decoration: none;
+
+    color: var(--blue3);
+
+    font-weight: bold;
+}
+
+.loginButton {
+    outline: none;
+
+    border: none;
+
+    background-color: var(--blue2);
+
+    width: 100%;
+    height: 50px;
+
+    border-radius: 25px;
+
+    color: whitesmoke;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    margin-bottom: 25px;
+    margin-top: 20px;
+}
+
+.signupPage {
+    font-size: 16px;
+}
+
+.signupPage a {
+    text-decoration: none;
+
+    color: rgb(107, 107, 255);
+
+    font-weight: bold;
+}
+
+.errorEmail {
+    font-size: 15px;
+
+    margin-left: 10px;
+
+    color: rgb(218, 1, 1);
+
+    margin-top: 5px;
+}
+
+.errorPassword {
+    font-size: 15px;
+
+    margin-left: 10px;
+
+    color: rgb(218, 1, 1);
+
+    margin-top: 5px;
+}
+
+.loginInput {
+    display: flex;
+
+    position: relative;
+}
+
+.showHide {
+    outline: none;
+
+    background-color: transparent;
+
+    cursor: pointer;
+
+    border: none;
+
+    font-size: 18px;
+
+    right: 15px;
+    top: 15px;
+
+    z-index: 1;
+
+    position: absolute;
+
+    color: var(--dark);
+}
+
+@media only screen and (max-width: 1000px) {
+    .right {
+        display: none;
+    }
+
+    .left {
+        width: 100%;
+    }
+
+    .loginBox {
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .right {
+        display: none;
+    }
+
+    .left {
+        width: 100%;
+
+        align-items: baseline;
+    }
+
+    .signupBox {
+        width: 95%;
+
+        margin-bottom: 0;
+        margin-top: 5vh;
+    }
 }
