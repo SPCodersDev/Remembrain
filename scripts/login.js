@@ -1,4 +1,4 @@
-function onSignIn(googleUser) {
+function callback(googleUser) {
     var profile = googleUser.getBasicProfile();
 
     var entity = {
