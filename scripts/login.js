@@ -27,29 +27,9 @@ function setData(entityObj) {
   });
 }
 
-// function sendEmailVerification() {
-//   // [START auth_send_email_verification]
-//   firebase.auth().currentUser.sendEmailVerification()
-//     .then(() => {
-//       // Email verification sent!
-//       // ...
-//     });
-//   // [END auth_send_email_verification]
-// }
-
-
-// OLD CODE
 if (JSON.parse(localStorage.getItem("loggedIn"))) {
   window.location.href = "home.html"
 }
-
-// if (localStorage.getItem("users") == null) {
-//     var users = [];
-
-//     localStorage.setItem("users", JSON.stringify(users));
-// } else {
-//     var users = JSON.parse(localStorage.getItem("users"));
-// }
 
 var cont;
 
@@ -135,7 +115,7 @@ function signInWithEmailPassword() {
 }
 
 function forgotPassword() {
-  const email = alert("Enter Email");
+  const email = prompt("Enter Email");
 
   firebase.auth().sendPasswordResetEmail(email)
     .then(() => {
