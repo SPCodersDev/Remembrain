@@ -7,6 +7,9 @@ l<!DOCTYPE html>
         <meta name='description' content=''>
         <meta name="google-signin-client_id" content="1047689252141-p8jbno8o4n5dnebqv7koqq5n87v9o2oa.apps.googleusercontent.com">
         <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
         <link rel='stylesheet' href='styles/style.css'>
         <link rel='stylesheet' href='styles/login.css'>
         <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.15.1/css/all.css' integrity='sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp' crossorigin='anonymous'>
@@ -15,17 +18,37 @@ l<!DOCTYPE html>
         <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-database.js"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
         <script src="https://apis.google.com/js/platform.js" async defer></script>
     </head>
     <body>
         <script src="https://accounts.google.com/gsi/client" async defer></script>
 
-        <div class="loginBox">
+        <div class="login">
             <div class="loginContent">
-                
+                <div class="loginBox">
+                    <div class="loginDetails">
+                        <div class="loginEmail">
+                            <div class="loginField">
+                                <div class="loginFieldLable">Email: </div>
+                                <input type="text" class="loginEmailInput">
+                            </div>
+                        </div>
+                        <div class="loginPassword">
+                            <div class="loginField">
+                                <div class="loginFieldLable">Password: </div>
+                                <input type="password" class="loginEmailInput">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="loginLinks">
+                        <div class="loginLink">
+                            <a href="" class="loginLinkA">Sign Up</a>
+                        </div>
+                        <div class="loginLink">
+                            <a href="" class="loginLinkA">Forgot Password</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
