@@ -9,7 +9,7 @@ function onSignIn(response) {
     // console.log("Image URL: " + responsePayload.picture);
     // console.log("Email: " + responsePayload.email);
 
-    console.log(reponse)
+    console.log(response)
 
     var responsePayload = response.getBasicProfile();
 
