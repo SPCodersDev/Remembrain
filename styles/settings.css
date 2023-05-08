@@ -1,0 +1,73 @@
+.settingsSection {
+    width: 100%;
+    height: min-content;
+
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.settingsSectionTitle {
+    font-size: 24px;
+
+    margin-right: 20px;
+}
+
+.settingsSectionInfo {
+    font-size: 14px;
+
+    padding: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    background-color: var(--blueT);
+
+    border: 3px solid var(--blue2);
+
+    border-radius: 100px;
+
+    cursor: not-allowed;
+}
+
+.settingsSection#changePassword {
+    display: block;
+}
+
+.settingsChangePasswordBox {
+    display: flex;
+    flex-direction: column;
+
+    padding: 30px;
+    padding-left: 50px;
+    padding-top: 20px;
+}
+
+.settingsChangePasswordBoxSection {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 25px;
+}
+
+.settingsChangePasswordBoxSectionTitle {
+    font-size: 18px;
+
+    margin-bottom: 7.5px;
+}
+
+.settingsChangePasswordBoxSectionInput {
+    font-size: 14px;
+
+    padding: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    width: 25vw;
+
+    background-color: var(--blueTL);
+
+    border: 3px solid var(--blue2);
+
+    border-radius: 100px;
+}

@@ -6,9 +6,13 @@
 }
 
 .title {
-    font-size: 36px;
+    font-size: 45px;
 
     width: 100%;
 
     border-bottom: 3px solid var(--color);
+}
+
+.content {
+    padding: 40px;
 }

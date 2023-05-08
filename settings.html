@@ -12,7 +12,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
         <link rel='stylesheet' href='styles/style.css'>
-        <link rel='stylesheet' href='styles/home.css'>
+        <link rel='stylesheet' href='styles/settings.css'>
         <link rel='stylesheet' href='styles/navbar.css'>
         <link rel='stylesheet' href='styles/pages.css'>
         <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.15.1/css/all.css' integrity='sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp' crossorigin='anonymous'>
@@ -30,6 +30,30 @@
 
         <div class="body">
             <div class="title">Settings</div>
+            <div class="content">
+                <div class="settingsSection">
+                    <div class="settingsSectionTitle">Email:</div>
+                    <div class="settingsSectionInfo" id = "sEmail"></div>
+                </div>
+                <div class="settingsSection">
+                    <div class="settingsSectionTitle">Username:</div>
+                    <div class="settingsSectionInfo" id = "sUsername"></div>
+                </div>
+                <div class="settingsSection" id = "changePassword">
+                    <div class="settingsSectionTitle">Change Password:</div>
+                    <div class="settingsChangePasswordBox">
+                        <div class="settingsChangePasswordBoxSection">
+                            <div class="settingsChangePasswordBoxSectionTitle">Enter New Password (8+ Characters):</div>
+                            <input type = "text" id = "cp1" class = "settingsChangePasswordBoxSectionInput">
+                        </div>
+                        <div class="settingsChangePasswordBoxSection">
+                            <div class="settingsChangePasswordBoxSectionTitle">Confirm New Password:</div>
+                            <input type = "text" id = "cp1"2 class = "settingsChangePasswordBoxSectionInput">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
         </div>
 
         <script src='scripts/init.js' async defer></script>

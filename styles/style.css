@@ -20,6 +20,8 @@ body {
     --blue1: #234082;
     --blue2: #2D5499;
     --blue3: #415dc3;
+    --blueT: #415dc34b;
+    --blueTL: #415dc322;
 }
 
 ::-webkit-scrollbar {
