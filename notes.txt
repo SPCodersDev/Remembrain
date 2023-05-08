@@ -1,3 +1,0 @@
-Create Popup on login and fix password reset (UI Wise)
-
-Fix Login |Function (redirect, etc.) - DO stuff with user

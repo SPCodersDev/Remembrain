@@ -7,11 +7,13 @@
         <meta name='description' content=''>
         <meta name="google-signin-client_id" content="1047689252141-p8jbno8o4n5dnebqv7koqq5n87v9o2oa.apps.googleusercontent.com">
         <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel="icon" href="brain-solid.svg">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
         <link rel='stylesheet' href='styles/style.css'>
         <link rel='stylesheet' href='styles/home.css'>
+        <link rel='stylesheet' href='styles/navbar.css'>
         <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.15.1/css/all.css' integrity='sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp' crossorigin='anonymous'>
         <script src='https://kit.fontawesome.com/a2406e7df8.js' crossorigin='anonymous'></script>
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.1.min.js"></script>
@@ -21,6 +23,27 @@
         <script src="https://apis.google.com/js/platform.js" async defer></script>
     </head>
     <body>
+        <div class="navbar">
+            <div class="navLeft">
+                <div class="navLogo">
+                    <a href = "home.html"><i class = "fas fa-brain"></i> Remembrain</a>
+                </div>
+                <div class="navSearch">
+                    <input type="text" class="navSearchInput" placeholder="Search Games...">
+                    <i class = "fas fa-search"></i>
+                </div>
+                <div class="navLink">
+                    <a href="">All Games</a>
+                </div>
+                <div class="navLink">
+                    <a href="">Memory</a>
+                </div>
+                <div class="navLink">
+                    <a href="">Logic</a>
+                </div>
+            </div>
+            <div class="navRight"></div>
+        </div>
 
         <script src='scripts/init.js' async defer></script>
         <script src='scripts/script.js' async defer></script>
