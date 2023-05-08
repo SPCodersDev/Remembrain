@@ -24,20 +24,21 @@ $("#cpBtn").on("click", function () {
         if (document.getElementById("cp1").value.length >= 8 && !(document.getElementById("cp1").value.indexOf(" ") >= 0)) {
             if (document.getElementById("cp2").value == document.getElementById("cp1").value) {
                 const user = firebase.auth().currentUser;
-                const newPassword = document.getElementById("cp1").value = "";
+                const newPassword = document.getElementById("cp1").value;
 
                 user.updatePassword(newPassword).then(() => {
                     document.querySelector(".popup2").style.display = "flex";
+                    $(".overlay").show();
                     window.setTimeout(function () {
                         document.querySelector(".popup2").style.display = "none";
                         $(".overlay").hide();
-                    }, 5000);
+                    }, 3000);
+
+                    document.getElementById("cp1").value = "";
+                    document.getElementById("cp2").value = "";
                 }).catch((error) => {
                     showError2(error)
                 });
-
-                document.getElementById("cp1").value = "";
-                document.getElementById("cp2").value = "";
             } else {
                 showError2("Passwords do Not Match")
             }
