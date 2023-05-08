@@ -2,8 +2,6 @@ if (JSON.parse(localStorage.getItem("loggedIn"))) {
   window.location.href = "home.html"
 }
 
-document.querySelector("l").style.display = "none";
-
 var cont;
 
 var emailError = document.querySelector(".errorEmail");
@@ -90,17 +88,51 @@ function signInWithEmailPassword() {
     });
 }
 
-function forgotPassword() {
-  const email = prompt("Enter Email");
+function openPasswordReset() {
+  $(".overlay").show();
+  $(".popup").show();
+  $(".popupError").hide();
+}
 
+function closePasswordReset() {
+  $(".overlay").hide();
+  $(".popup").hide();
+  $(".popupError").hide();
+}
+
+function showPopupError(error) {
+  document.querySelector(".popupError").style.display = "block";
+  $(".popupError").html(error);
+}
+
+function passwordReset() {
+  openPasswordReset();
+}
+
+$(".popupBtn").on("click", function() {
+  if(document.querySelector(".popupInput").value.length > 0) {
+    forgotPassword(document.querySelector(".popupInput").value);
+  } else {
+    showPopupError("Please Enter an Email")
+  }
+    
+});
+
+function forgotPassword(email) {
   firebase.auth().sendPasswordResetEmail(email)
     .then(() => {
-      alert("Sent!")
+      closePasswordReset();
+      $(".overlay").show();
+      document.querySelector(".popup2").style.display = "flex";
+      window.setTimeout(function () {
+        document.querySelector(".popup2").style.display = "none";
+        $(".overlay").hide();
+      }, 5000);
     })
     .catch((error) => {
       var errorCode = error.code;
       var errorMessage = error.message;
-      
-      alert(errorMessage)
+
+      showPopupError(errorMessage);
     });
 }

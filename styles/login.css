@@ -17,7 +17,100 @@ body {
 }
 
 .popup {
-    
+    position: absolute;
+    width: 50%;
+    height: min-content;
+    background-color: var(--blue2);
+    color: whitesmoke;
+    border-radius: 15px;
+    text-align: center;
+    padding: 30px;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 901;
+}
+
+.popup2 {
+    position: absolute;
+    width: 70%;
+    height: min-content;
+    background-color: var(--blue2);
+    color: whitesmoke;
+    border-radius: 15px;
+    text-align: center;
+    padding: 45px;
+
+    font-size: 24px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 902;
+}
+
+.popupTitle {
+    font-size: 22px;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+.popupInput {
+    padding: 5px;
+    padding-left: 15px;
+
+    width: 50%;
+    height: 30px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    border: 1px solid var(--lg);
+
+    border-radius: 25px;
+
+    color: #44474b;
+}
+
+.popupBtn {
+    outline: none;
+
+    border: none;
+
+    background-color: var(--blue1);
+
+    width: 20%;
+    height: 30px;
+
+    border-radius: 25px;
+
+    color: whitesmoke;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    margin-left: 20px;
+}
+
+.popupError {
+    font-size: 14px;
+
+    margin-left: 10px;
+
+    color: rgb(255, 0, 0);
+
+    margin-top: 10px;
+
+    font-weight: normal;
 }
 
 .left {
@@ -262,6 +355,10 @@ body {
 
     .loginBox {
         width: 95%;
+    }
+
+    .popup {
+        width: 80%;
     }
 }
 

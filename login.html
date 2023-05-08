@@ -1,4 +1,4 @@
-l<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset='utf-8'>
@@ -23,8 +23,12 @@ l<!DOCTYPE html>
     <body>
         <div class="overlay" style = "display: none;"></div>
         <div class="popup" style = "display: none;">
-            
+            <div class = "popupTitle">Password Reset</div>
+            <input type = "email" class="popupInput" placeholder="Enter Email...">
+            <button class = "popupBtn">Send</button>
+            <div class = "popupError" style = "display: none;">Not Valid</div>
         </div>
+        <div class="popup2" style = "display: none;">Email Sent! Check Your Inbox for a Reset Link</div>
         <div class="left">
             <div class="loginBox">
                 <div class="loginTitle">Login</div>
@@ -45,7 +49,7 @@ l<!DOCTYPE html>
                     </div>
                     <div class="bar">
                         <div class="rem"><input tabindex="-1" id="rem" type="checkbox" class="remInput">&nbsp;&nbsp;Remember
-                            Me</div><a tabindex="-1" class="forgot" onclick="forgotPassword()">Forgot Password?</a>
+                            Me</div><a tabindex="-1" class="forgot" style = "cursor: pointer;" onclick="passwordReset()">Forgot Password?</a>
                     </div>
                     <button class="loginButton">Login</button>
                     <div class="signupPage">Not Signed Up? <a href="signup.html">Create an Account</a></div>
