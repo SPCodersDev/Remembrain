@@ -1,3 +1,37 @@
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 900;
+}
+
+.popup2 {
+    position: absolute;
+    width: 70%;
+    height: min-content;
+    background-color: var(--blue2);
+    color: whitesmoke;
+    border-radius: 15px;
+    text-align: center;
+    padding: 45px;
+
+    font-size: 24px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 902;
+}
+
 .settingsSection {
     width: 100%;
     height: min-content;
