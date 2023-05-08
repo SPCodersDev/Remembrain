@@ -1,3 +1,5 @@
+$("#enterName").html(JSON.parse(localStorage.entity).name)
+
 document.querySelector(".openPopup").addEventListener("click", function () {
     if (document.querySelector(".openPopup").innerHTML.includes("down")) {
         document.querySelector(".openPopup").innerHTML = '<i class="fas fa-chevron-up"></i>';
