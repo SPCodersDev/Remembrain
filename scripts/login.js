@@ -20,34 +20,34 @@ function passwordErrorShow(value) {
 var loginBtn = document.querySelector(".loginButton");
 
 loginBtn.addEventListener("click", function () {
-    emailError.style.display = "none";
-    passwordError.style.display = "none";
+  emailError.style.display = "none";
+  passwordError.style.display = "none";
 
-    if (document.querySelector(".loginCredentialEmail").value.length != 0) {
-        cont = true;
+  if (document.querySelector(".loginCredentialEmail").value.length != 0) {
+    cont = true;
+  } else {
+    cont = false;
+
+    emailErrorShow("Please Enter Email");
+  }
+
+  if (document.querySelector(".loginCredentialPassword").value.length != 0) {
+    cont = true;
+  } else {
+    cont = false;
+
+    passwordErrorShow("Please Enter Password");
+  }
+
+  if (cont && document.querySelector(".loginCredentialPassword").value.length != 0 && document.querySelector(".loginCredentialEmail").value.length != 0) {
+    if (document.querySelector(".loginCredentialEmail").value.split('@').length - 1 == 1 && document.querySelector(".loginCredentialEmail").value.split('.').length - 1 == 1) {
+      validate();
     } else {
-        cont = false;
+      cont = false;
 
-        emailErrorShow("Please Enter Email");
+      emailErrorShow("Please Enter a Valid Email")
     }
-
-    if (document.querySelector(".loginCredentialPassword").value.length != 0) {
-        cont = true;
-    } else {
-        cont = false;
-
-        passwordErrorShow("Please Enter Password");
-    }
-
-    if (cont && document.querySelector(".loginCredentialPassword").value.length != 0 && document.querySelector(".loginCredentialEmail").value.length != 0) {
-        if (document.querySelector(".loginCredentialEmail").value.split('@').length - 1 == 1 && document.querySelector(".loginCredentialEmail").value.split('.').length - 1 == 1) {
-            validate();
-        } else {
-            cont = false;
-
-            emailErrorShow("Please Enter a Valid Email")
-        }
-    }
+  }
 });
 
 function validate() {
@@ -71,7 +71,14 @@ function signInWithEmailPassword() {
         email: user.email,
         emailVerified: user.emailVerified,
       }
-    
+
+      firebase.database().ref('users/' + user.uid).set({
+        id: user.uid,
+        name: userName,
+        email: user.email,
+        emailVerified: user.emailVerified,
+      });
+
       localStorage.setItem("entity", JSON.stringify(entity));
       localStorage.setItem("loggedIn", JSON.stringify(true));
       localStorage.setItem("rememberMe", JSON.stringify(document.getElementById("rem").checked));
@@ -109,13 +116,13 @@ function passwordReset() {
   openPasswordReset();
 }
 
-$(".popupBtn").on("click", function() {
-  if(document.querySelector(".popupInput").value.length > 0) {
+$(".popupBtn").on("click", function () {
+  if (document.querySelector(".popupInput").value.length > 0) {
     forgotPassword(document.querySelector(".popupInput").value);
   } else {
     showPopupError("Please Enter an Email")
   }
-    
+
 });
 
 function forgotPassword(email) {
