@@ -95,6 +95,13 @@ function validate() {
                         emailVerified: user.emailVerified,
                     }
 
+                    firebase.database().ref('users/' + user.uid).set({
+                        id: user.uid,
+                        name: userName,
+                        email: user.email,
+                        emailVerified: user.emailVerified,
+                    });                    
+
                     localStorage.setItem("entity", JSON.stringify(entity));
                     localStorage.setItem("loggedIn", JSON.stringify(true));
 
