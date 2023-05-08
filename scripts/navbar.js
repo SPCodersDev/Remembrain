@@ -42,4 +42,4 @@ nav.innerHTML=(`<div class="navLeft">
                             <i class="fas fa-chevron-down"></i>
                         </button>
                     </span>
-                </div>'`)
+                </div>`)
