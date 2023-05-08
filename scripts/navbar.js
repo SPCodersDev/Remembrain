@@ -2,7 +2,7 @@ var nav = document.querySelector(".navbar");
 
 nav.innerHTML = "";
 
-nav.innerHTML=(`<div class="navLeft">
+nav.innerHTML = (`<div class="navLeft">
                     <div class="navLogo">
                         <a href = "home.html"><i class = "fas fa-brain"></i> Remembrain</a>
                     </div>
@@ -44,7 +44,21 @@ nav.innerHTML=(`<div class="navLeft">
                     </span>
                 </div>`);
 
-$("#signOut").on("click", function() {
+$("#enterName").html(JSON.parse(localStorage.entity).name)
+
+document.querySelector(".openPopup").addEventListener("click", function () {
+    if (document.querySelector(".openPopup").innerHTML.includes("down")) {
+        document.querySelector(".openPopup").innerHTML = '<i class="fas fa-chevron-up"></i>';
+
+        document.getElementById("popup").style.display = "inline-block";
+    } else {
+        document.querySelector(".openPopup").innerHTML = '<i class="fas fa-chevron-down"></i>';
+
+        document.getElementById("popup").style.display = "none";
+    }
+});
+
+$("#signOut").on("click", function () {
     localStorage.loggedIn = JSON.stringify(false);
     localStorage.entity = JSON.stringify({});
     localStorage.rememberMe = JSON.stringify(false);
