@@ -71,3 +71,32 @@
 
     border-radius: 100px;
 }
+
+.settingsChangePasswordBoxSectionError {
+    font-size: 14px;
+
+    margin-left: 10px;
+
+    color: rgb(218, 1, 1);
+
+    margin-top: 5px;
+}
+
+.settingsChangePasswordBoxSectionButton {
+    width: max-content;
+
+    padding: 15px;
+    
+    font-size: 15px;
+
+    outline: none;
+    border: none;
+
+    background-color: var(--blue3);
+
+    color: whitesmoke;
+
+    border-radius: 15px;
+
+    cursor: pointer;
+}
