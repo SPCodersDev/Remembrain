@@ -92,6 +92,8 @@ body {
     padding: 5px;
     padding-left: 15px;
 
+    margin-bottom: -5px;
+
     width: 100%;
     height: 35px;
 
@@ -125,24 +127,6 @@ body {
 }
 
 .signupCredentialPassword2 {
-    padding: 5px;
-    padding-left: 15px;
-
-    width: 100%;
-    height: 35px;
-
-    font-size: 14px;
-
-    outline: none;
-
-    border: 1px solid var(--lg);
-
-    border-radius: 25px;
-
-    color: #44474b;
-}
-
-.signupCredentialUsername {
     padding: 5px;
     padding-left: 15px;
 
