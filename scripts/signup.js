@@ -85,13 +85,28 @@ function validate() {
             firebase.auth().createUserWithEmailAndPassword(email, password)
                 .then((userCredential) => {
                     var user = userCredential.user;
-                    
-                    // window.location.href = "home.html";
+
+                    var userName = user.email.split("@")[0];
+
+                    var entity = {
+                        id: user.uid,
+                        name: userName,
+                        email: user.email,
+                        emailVerified: user.emailVerified,
+                    }
+
+                    localStorage.setItem("entity", JSON.stringify(entity));
+                    localStorage.setItem("loggedIn", JSON.stringify(true));
+                    localStorage.setItem("rememberMe", JSON.stringify(document.getElementById("rem").checked));
+
+                    window.setTimeout(function () {
+                      window.location.href = "home.html";
+                    }, 100);
                 })
                 .catch((error) => {
                     var errorCode = error.code;
                     var errorMessage = error.message;
-                    
+
                     passwordErrorShow2(errorMessage);
                 });
         } else {

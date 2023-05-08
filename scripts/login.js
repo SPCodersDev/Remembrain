@@ -1,32 +1,3 @@
-function onSignIn(googleUser) {
-  var profile = googleUser.getBasicProfile();
-
-  var entity = {
-    id: profile.getId(),
-    name: profile.getName(),
-    image: profile.getImageUrl(),
-    email: profile.getEmail(),
-  }
-
-  localStorage.setItem("entity", JSON.stringify(entity));
-  localStorage.setItem("loggedIn", JSON.stringify(true));
-
-  setData(entity);
-
-  window.setTimeout(function () {
-    window.location.href = "home.html";
-  }, 100);
-}
-
-function setData(entityObj) {
-  firebase.database().ref('users/' + entityObj.id).set({
-    id: entityObj.id,
-    name: entityObj.name,
-    image: entityObj.image,
-    email: entityObj.email,
-  });
-}
-
 if (JSON.parse(localStorage.getItem("loggedIn"))) {
   window.location.href = "home.html"
 }
@@ -88,23 +59,26 @@ function signInWithEmailPassword() {
   var password = document.querySelector(".loginCredentialPassword").value;
 
   firebase.auth().signInWithEmailAndPassword(email, password).then((userCredential) => {
-      localStorage.setItem("loggedIn", JSON.stringify(false));
-      localStorage.setItem("rememberMe", JSON.stringify(document.getElementById("rem").checked));
-
       var user = userCredential.user;
 
-      console.log(user)
+      console.log(user);
 
-      // var entity = {
-      //   id: profile.getId(),
-      //   name: profile.getName(),
-      //   image: profile.getImageUrl(),
-      //   email: profile.getEmail(),
-      // }
+      var userName = user.email.split("@")[0];
+
+      var entity = {
+        id: user.uid,
+        name: userName,
+        email: user.email,
+        emailVerified: user.emailVerified,
+      }
     
-      localStorage.setItem("entity", JSON.stringify(user));
+      localStorage.setItem("entity", JSON.stringify(entity));
+      localStorage.setItem("loggedIn", JSON.stringify(true));
+      localStorage.setItem("rememberMe", JSON.stringify(document.getElementById("rem").checked));
 
-      // window.location.href = "home.html";
+      window.setTimeout(function () {
+        window.location.href = "home.html";
+      }, 100);
     })
     .catch((error) => {
       var errorCode = error.code;
