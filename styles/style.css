@@ -9,6 +9,7 @@ body {
     height: 100vh;
 
     overflow-x: hidden;
+    overflow-y: scroll;
 
     font-family: 'Montserrat', sans-serif;
 
@@ -18,5 +19,23 @@ body {
     --dark: #0A1B2B;
     --blue1: #234082;
     --blue2: #2D5499;
-    --blue3: #4d67c6;
+    --blue3: #415dc3;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--blue2);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--blue1);
+
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #465169;
 }

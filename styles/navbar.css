@@ -31,6 +31,7 @@
     font-size: 24px;
 
     padding-left: 14px;
+    padding-right: 14px;
 }
 
 .navLogo a {
@@ -45,6 +46,10 @@
     padding: 15px;
 
     display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    position: relative;
 }
 
 .navSearchInput {
@@ -69,10 +74,16 @@
     color: whitesmoke;
 }
 
+.navSearch i {
+    position: absolute;
+
+    right: 30px;
+}
+
 .navLink {
     font-size: 18px;
 
-    padding: 10px;
+    padding: 15px;
 }
 
 .navLink a {
@@ -90,4 +101,71 @@
 
 .navLink a:hover {
     color: rgb(200, 200, 200);
+}
+
+.user {
+    font-size: 15px;
+
+    display: flex;
+    align-items: center;
+}
+
+.person {
+    font-size: 15px;
+
+    display: flex;
+    align-items: center;
+}
+
+.userImg {
+    font-size: 40px;
+
+    margin-right: 10px;
+}
+
+.openPopup {
+    background-color: transparent;
+
+    border: none;
+
+    outline: none;
+
+    cursor: pointer;
+
+    -webkit-transition: -webkit-transform 0.3s;
+    -moz-transition: -moz-transform 0.3s;
+    -o-transition: -o-transform 0.3s;
+    -ms-transition: -ms-transform 0.3s;
+    transition: transform 0.3s;
+}
+
+#popup {
+    display: none;
+    position: absolute;
+    width: 225px;
+    height: 150px;
+    background-color: rgb(245, 245, 245);
+    color: var(--t);
+    border-radius: 15px;
+    padding: 20px;
+
+    right: 5px;
+    top: 9vh;
+    z-index: 901;
+
+    align-items: center;
+}
+
+.arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+
+    border-bottom: 15px solid rgb(245, 245, 245);
+
+    position: absolute;
+
+    right: 10px;
+    top: -14.5px;
 }
