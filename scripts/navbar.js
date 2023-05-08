@@ -42,4 +42,14 @@ nav.innerHTML=(`<div class="navLeft">
                             <i class="fas fa-chevron-down"></i>
                         </button>
                     </span>
-                </div>`)
+                </div>`);
+
+$("#signOut").on("click", function() {
+    localStorage.loggedIn = JSON.stringify(false);
+    localStorage.entity = JSON.stringify({});
+    localStorage.rememberMe = JSON.stringify(false);
+
+    window.setTimeout(function () {
+        window.location.href = "login.html";
+    }, 100);
+});
