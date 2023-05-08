@@ -2,6 +2,8 @@ if (JSON.parse(localStorage.getItem("loggedIn"))) {
   window.location.href = "home.html"
 }
 
+document.querySelector("l").style.display = "none";
+
 var cont;
 
 var emailError = document.querySelector(".errorEmail");

@@ -97,7 +97,6 @@ function validate() {
 
                     localStorage.setItem("entity", JSON.stringify(entity));
                     localStorage.setItem("loggedIn", JSON.stringify(true));
-                    localStorage.setItem("rememberMe", JSON.stringify(document.getElementById("rem").checked));
 
                     window.setTimeout(function () {
                       window.location.href = "home.html";
