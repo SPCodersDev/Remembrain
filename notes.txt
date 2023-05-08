@@ -1,0 +1,1 @@
+make it so when you click enter you login / signup (trigger func)
