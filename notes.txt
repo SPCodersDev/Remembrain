@@ -1,3 +1,5 @@
 make it so when you click enter you login / signup (trigger func)
 
 make a home page, like an about page where you have login option at the top. e.g. limosity
+
+Leaderboard: Top 5 personal and FULL GLOBAL WITH RANKING FOR PERSONAL HIGHSCORE on every game, make it EASILY ADAPTABLE
