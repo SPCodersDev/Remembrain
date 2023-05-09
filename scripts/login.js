@@ -21,14 +21,12 @@ var loginBtn = document.querySelector(".loginButton");
 
 loginBtn.addEventListener("click", function() { loginFunction() });
 
-document.querySelector('input').onkeypress = function(e){
-  if (!e) e = window.event;
-  var keyCode = e.code || e.key;
-  if (keyCode == 'Enter'){
-    loginFunction();
-    return false;
+
+document.addEventListener("keydown", function(event) {
+  if (event.key === 'Enter') {
+      loginFunction();
   }
-}
+});
 
 function loginFunction() {
   emailError.style.display = "none";

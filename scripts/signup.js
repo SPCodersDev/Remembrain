@@ -27,15 +27,12 @@ var loginBtn = document.querySelector(".signupButton");
 
 loginBtn.addEventListener("click", function() { signupFunction() });
 
-document.querySelector('input').onkeypress = function(e){
-    if (!e) e = window.event;
-    var keyCode = e.code || e.key;
-    if (keyCode == 'Enter'){
-      signupFunction();
-      return false;
+document.addEventListener("keydown", function(event) {
+    if (event.key === 'Enter') {
+        signupFunction();
     }
-  }
-
+});
+  
 function signupFunction () {
     emailError.style.display = "none";
     passwordError.style.display = "none";
