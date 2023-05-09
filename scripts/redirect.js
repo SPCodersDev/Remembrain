@@ -12,7 +12,7 @@ if (window.location.href.includes("login.html") || window.location.href.includes
             window.location.href = "login.html";
         }
     }
-} else {
+} else if(!window.location.href.includes("index.html") || !window.location.href.includes(".html")) {
     if (JSON.parse(localStorage.loggedIn)) {
         window.location.href = "home.html";
     } else {
