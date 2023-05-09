@@ -25,7 +25,18 @@ function passwordErrorShow2(value) {
 
 var loginBtn = document.querySelector(".signupButton");
 
-loginBtn.addEventListener("click", function () {
+loginBtn.addEventListener("click", function() { signupFunction() });
+
+document.querySelector('input').onkeypress = function(e){
+    if (!e) e = window.event;
+    var keyCode = e.code || e.key;
+    if (keyCode == 'Enter'){
+      signupFunction();
+      return false;
+    }
+  }
+
+function signupFunction () {
     emailError.style.display = "none";
     passwordError.style.display = "none";
     passwordError2.style.display = "none";
@@ -55,7 +66,7 @@ loginBtn.addEventListener("click", function () {
             emailErrorShow("Please Enter a Valid Email");
         }
     }
-});
+};
 
 function validate() {
     var email2 = document.querySelector(".signupCredentialEmail");
