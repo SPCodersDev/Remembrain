@@ -1,1 +1,3 @@
 make it so when you click enter you login / signup (trigger func)
+
+make a home page, like an about page where you have login option at the top. e.g. limosity
