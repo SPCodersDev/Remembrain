@@ -51,7 +51,7 @@ function loginFunction() {
   }
 
   if (cont && document.querySelector(".loginCredentialPassword").value.length != 0 && document.querySelector(".loginCredentialEmail").value.length != 0) {
-    if (document.querySelector(".loginCredentialEmail").value.split('@').length - 1 == 1 && document.querySelector(".loginCredentialEmail").value.split('.').length - 1 >= 1) {
+    if (document.querySelector(".loginCredentialEmail").value.split('@').length - 1 == 1 && document.querySelector(".loginCredentialEmail").value.split('@')[1].split(".").length - 1 == 1) {
       validate();
     } else {
       cont = false;
