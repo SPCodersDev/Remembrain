@@ -19,7 +19,9 @@ function passwordErrorShow(value) {
 
 var loginBtn = document.querySelector(".loginButton");
 
-loginBtn.addEventListener("click", function () {
+loginBtn.addEventListener("click", function() { loginFunction() });
+
+function loginFunction() {
   emailError.style.display = "none";
   passwordError.style.display = "none";
 
@@ -48,7 +50,7 @@ loginBtn.addEventListener("click", function () {
       emailErrorShow("Please Enter a Valid Email")
     }
   }
-});
+};
 
 function validate() {
   signInWithEmailPassword();

@@ -47,7 +47,7 @@ loginBtn.addEventListener("click", function () {
     }
 
     if (cont && document.querySelector(".signupCredentialPassword").value.length != 0 && document.querySelector(".signupCredentialEmail").value.length != 0) {
-        if (document.querySelector(".signupCredentialEmail").value.split('@').length - 1 == 1 && document.querySelector(".signupCredentialEmail").value.split('.').length - 1 == 1) {
+        if (document.querySelector(".signupCredentialEmail").value.split('@').length - 1 == 1) {
             validate();
         } else {
             cont = false;
