@@ -1,4 +1,4 @@
-make it so when you click enter you login / signup (trigger func)
+NEED TO FIX REDIRECT TO ALLOW INDEX
 
 make a home page, like an about page where you have login option at the top. e.g. limosity
 
