@@ -1,7 +1,21 @@
+::-webkit-scrollbar-track {
+    background: #d6dbe6;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c2cce4;
+
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(73, 89, 122);
+}
+
 .topBar {
     height: 8vh;
 
-    background-color: wheat;
+    background-color: rgb(235, 235, 235);
 }
 
 .section {
@@ -10,4 +24,54 @@
 
 .section#sec1 {
     height: 92vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainText {
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mainTitle {
+    font-size: 80px;
+
+    font-weight: bold;
+}
+
+.mainCaption {
+    font-size: 26px;
+
+    font-weight: 300;
+
+    color: var(--dark);
+}
+
+.getStarted {
+    margin-top: 17.5px;
+
+    padding: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+
+    width: fit-content;
+
+    background-color: var(--blue1);
+
+    color: whitesmoke;
+
+    text-decoration: none;
+
+    font-size: 22px;
+
+    border-radius: 60px;
+
+    margin-left: auto;
+    margin-right: auto;
 }
