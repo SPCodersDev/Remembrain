@@ -1,0 +1,13 @@
+.topBar {
+    height: 8vh;
+
+    background-color: wheat;
+}
+
+.section {
+    height: 50vh;
+}
+
+.section#sec1 {
+    height: 92vh;
+}
