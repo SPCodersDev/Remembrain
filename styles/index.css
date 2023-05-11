@@ -29,6 +29,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    /* box-shadow: inset 0px 0px 100px 100px var(--blueT); */
+    background-image: url('/images/indexBG.jpeg');
+    background-size: cover;
 }
 
 .mainText {
