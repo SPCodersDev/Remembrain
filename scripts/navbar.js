@@ -6,12 +6,12 @@ nav.innerHTML = (`<div class="navLeft">
                     <div class="navLogo">
                         <a href = "index.html"><i class = "fas fa-brain"></i> Remembrain</a>
                     </div>
-                    <div class="navLink">
-                        <a href = "home.html">Home</a>
-                    </div>
                     <div class="navSearch">
                         <input type="text" class="navSearchInput" placeholder="Search Games...">
                         <i class = "fas fa-search"></i>
+                    </div>
+                    <div class = "navLink">
+                        <a href="home.html">Home</div>
                     </div>
                     <div class="navLink">
                         <a href="">All Games</a>
