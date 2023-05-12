@@ -15,7 +15,35 @@
 .topBar {
     height: 8vh;
 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
     background-color: rgb(235, 235, 235);
+
+    padding: 10px;
+}
+
+.topBarLeft {
+    display: flex;
+    align-items: center;
+
+    height: 100%;
+
+    font-size: 5vh;
+}
+
+.topBarLeftText {
+    margin-left: 10px;
+
+    font-size: 3.5vh;
+}
+
+.topBarRight {
+    display: flex;
+    align-items: center;
+
+    height: 100%;
 }
 
 .section {
