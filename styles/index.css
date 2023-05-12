@@ -29,14 +29,52 @@
     align-items: center;
 
     height: 100%;
+}
+
+.topBarLogo {
+    display: flex;
+    align-items: center;
+
+    height: 100%;
 
     font-size: 5vh;
 }
 
 .topBarLeftText {
     margin-left: 10px;
+    margin-right: 10px;
 
     font-size: 3.5vh;
+
+    font-weight: bold;
+}
+
+.topBarSec {
+    margin-left: 10px;
+
+    font-size: 3vh;
+
+    display: flex;
+    align-items: center;
+
+    height: 100%;
+}
+
+.topBarSec a {
+    text-decoration: none;
+
+    font-size: 600;
+
+    color: var(--color);
+
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+}
+
+.topBarSec a:hover {
+    color: var(--dark);
 }
 
 .topBarRight {
@@ -44,6 +82,33 @@
     align-items: center;
 
     height: 100%;
+}
+
+.topBarRightLink {
+    margin: 5px;
+}
+
+.topBarRightLink:last-child {
+    margin-right: 0px;
+}
+
+.topBarRightLink a {
+    font-size: 14px;
+
+    text-decoration: none;
+
+    color: whitesmoke;
+
+    padding: 10px;
+
+    border-radius: 150px;
+
+    background-color: var(--blue3);
+
+    cursor: pointer;
+
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .section {
