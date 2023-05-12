@@ -1,4 +1,4 @@
-add about contact (left next to lgoo) and login/signuo on right in index nav
+about & contact page
 
 Leaderboard: Top 5 personal and FULL GLOBAL WITH RANKING FOR PERSONAL HIGHSCORE on every game, make it EASILY ADAPTABLE
 
