@@ -86,7 +86,6 @@ function signInWithEmailPassword() {
         name: userName,
         email: user.email,
         emailVerified: user.emailVerified,
-        special: "test",
       });
 
       localStorage.setItem("entity", JSON.stringify(entity));
