@@ -10,7 +10,3 @@ const firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig);
-
-firebase.database().ref('test/').set({
-    text: "working - IS"
-});
