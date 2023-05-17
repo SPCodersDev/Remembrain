@@ -1,0 +1,136 @@
+::-webkit-scrollbar-track {
+    background: #d6dbe6;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c2cce4;
+
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(73, 89, 122);
+}
+
+.topBar {
+    height: 8vh;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: rgb(235, 235, 235);
+
+    padding: 10px;
+}
+
+.topBarLeft {
+    display: flex;
+    align-items: center;
+
+    margin-left: 15px;
+
+    height: 100%;
+}
+
+.topBarLogo {
+    display: flex;
+    align-items: center;
+
+    height: 100%;
+
+    font-size: 28px;
+}
+
+.topBarLeftText {
+    margin-left: 10px;
+    margin-right: 10px;
+
+    font-size: 24px;
+
+    font-weight: bold;
+}
+
+.topBarSec {
+    margin: 5px;
+    margin-left: 10px;
+
+    display: flex;
+    align-items: center;
+
+    height: 100%;
+}
+
+.topBarSec a {
+    text-decoration: none;
+
+    font-size: 600;
+
+    font-size: 20px;
+
+    margin-top: 2px;
+
+    color: var(--color);
+
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+}
+
+.topBarSec a:hover {
+    color: var(--dark);
+}
+
+.topBarRight {
+    display: flex;
+    align-items: center;
+
+    height: 100%;
+
+    margin-right: 15px;
+}
+
+.topBarRightLink {
+    margin: 7.5px;
+}
+
+.topBarRightLink:last-child {
+    margin-right: 0px;
+}
+
+.topBarRightLink a {
+    font-size: 16px;
+
+    text-decoration: none;
+
+    color: whitesmoke;
+
+    padding: 10px;
+
+    border-radius: 150px;
+
+    background-color: var(--blue3);
+
+    cursor: pointer;
+
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.section {
+    height: 50vh;
+}
+
+.section#sec1 {
+    height: 92vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* box-shadow: inset 0px 0px 100px 100px var(--blueT); */
+    background-image: url('/images/indexBG.jpeg');
+    background-size: cover;
+}

@@ -11,7 +11,7 @@ nav.innerHTML = (`<div class="navLeft">
                         <i class = "fas fa-search"></i>
                     </div>
                     <div class = "navLink">
-                        <a href="home.html">Home</div>
+                        <a href="home.html">Home</a>
                     </div>
                     <div class="navLink">
                         <a href="">All Games</a>

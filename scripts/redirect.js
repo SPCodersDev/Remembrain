@@ -15,7 +15,7 @@ if(!window.location.href.includes(".html")) {
                 window.location.href = "login.html";
             }
         }
-    } else if(!window.location.href.includes("index.html")) {
+    } else if(!window.location.href.includes("index.html") && !window.location.href.includes("about.html") && !window.location.href.includes("contact.html")) {
         if (JSON.parse(localStorage.loggedIn)) {
             window.location.href = "home.html";
         } else {
