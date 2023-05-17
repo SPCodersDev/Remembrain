@@ -9,5 +9,5 @@ Description:
 
 1. The Typing Game(https://lolll.pythonprograms.repl.co/): 
 
-Name: 
+Name: Speed Type
 Description: 
