@@ -129,4 +129,7 @@
 .content {
     background-image: url('/images/mainBG.jpeg');
     background-size: cover;
+
+    width: 100%;
+    min-height: calc(100% - 8vh);
 }
