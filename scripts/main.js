@@ -2,8 +2,7 @@ var topBar = document.querySelector(".topBar");
 
 topBar.innerHTML = "";
 
-topBar.innerHTML = (`<div class="topBar">
-                    <div class="topBarLeft">
+topBar.innerHTML = (`<div class="topBarLeft">
                         <div class = "topBarLogo">
                             <i class = "fas fa-brain"></i>
                             <div class="topBarLeftText">Remembrain</div>
@@ -17,13 +16,12 @@ topBar.innerHTML = (`<div class="topBar">
                     </div>
                     <div class="topBarRight">
                         <div class="topBarRightLink">
-                            <a href="login.html" class="topBarLogin">Log In</a>
+                            <a href="login.html" class"topBarLogin">Log In</a>
                         </div>
                         <div class="topBarRightLink">
                             <a href="signup.html" class="topBarSignup">Sign Up</a>
                         </div>
-                    </div>
-                </div>`);
+                    </div>`);
 
 var topBarRight = document.querySelector(".topBarRight");
 
