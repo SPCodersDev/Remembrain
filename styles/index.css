@@ -1,3 +1,15 @@
+.section#index {
+    height: 92vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* box-shadow: inset 0px 0px 100px 100px var(--blueT); */ 
+    /* background-image: url('/images/mainBG.jpeg'); */
+    /* background-size: cover; */
+}
+
 .mainText {
     text-align: center;
 
