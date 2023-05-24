@@ -1,7 +1,5 @@
 NEED |TO FIX MAIN PAGES
 
-about & contact page & make index login and sugnup button only come up for unlogeed in, otherwise go to home link
-
 Leaderboard: Top 5 personal and FULL GLOBAL WITH RANKING FOR PERSONAL HIGHSCORE on every game, make it EASILY ADAPTABLE
 
 contact page
