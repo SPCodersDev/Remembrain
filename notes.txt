@@ -1,7 +1,3 @@
-NEED |TO FIX MAIN PAGES
-
 Leaderboard: Top 5 personal and FULL GLOBAL WITH RANKING FOR PERSONAL HIGHSCORE on every game, make it EASILY ADAPTABLE
 
 contact page
-
-REJECT MOBILE DEVICES IN SCRIPT FILE(except index - make that mobile friendly and make button not work)

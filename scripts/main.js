@@ -63,3 +63,8 @@ if (localStorage.loggedIn == null || !JSON.parse(localStorage.loggedIn)) {
     topBarRightLink.appendChild(topBarHome);
     topBarRight.appendChild(topBarRightLink);
 }
+
+if(innerWidth < innerHeight) {
+    $(".topBarRight").hide();
+    $(".getStarted").hide();
+}
