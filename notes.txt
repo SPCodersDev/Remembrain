@@ -1,3 +1,16 @@
 Leaderboard: Top 5 personal and FULL GLOBAL WITH RANKING FOR PERSONAL HIGHSCORE on every game, make it EASILY ADAPTABLE
 
 put stuff in contact and about pages - leo and hassan job
+
+fix generatir
+
+FOR HASSAN & LEO: Each Game:
+
+Description: What it is
+How to Play: //wrie
+Version: 1.0.0
+Date Added: 27/7/21
+Tags: GET 5 SPECIAL TAGS WHICH ARE UNIFORM THROUGHOUT
+
+Writing game:
+See how fast and accuratatly you can type in our typing test game. You have 1 minute to see how much and how fast you can complete our typing challenges. Good luck challenger!

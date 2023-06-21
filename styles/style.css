@@ -22,6 +22,7 @@ body {
     --blue3: #415dc3;
     --blueT: #415dc34b;
     --blueTL: #415dc322;
+    --light: rgb(226, 226, 226);
 }
 
 .mobileMsg {
