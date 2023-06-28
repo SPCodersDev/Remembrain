@@ -9,7 +9,7 @@ if(!window.location.href.includes(".html")) {
         if (JSON.parse(localStorage.loggedIn)) {
             window.location.href = "home.html";
         } 
-    } else if (window.location.href.includes("home.html") || window.location.href.includes("settings.html")) {
+    } else if (window.location.href.includes("home.html") || window.location.href.includes("all.html") || window.location.href.includes("settings.html")) {
         if (!window.location.href.includes("5500") && !window.location.href.includes(".preview.app")) {
             if (!JSON.parse(localStorage.loggedIn)) {
                 window.location.href = "login.html";

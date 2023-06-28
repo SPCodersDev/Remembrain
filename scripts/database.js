@@ -21,7 +21,7 @@ var database = {
 
 function generateIcon(img, name, url, parent) {
     var iconItem = document.createElement("a");
-    iconItem.classList.add("iconItem");
+    iconItem.classList.add("icon");
     iconItem.href = url;
     iconItem.style.cursor = "pointer";
     iconItem.style.textDecoration = "none";
@@ -51,7 +51,7 @@ function loadAll(parent) {
     }
 }
 
-function sorticons(input2, ul2, li2) {
+function sortIcons(input2, ul2, li2) {
     var i;
     var input = input2;
     var filter = input.value.toLowerCase();
@@ -94,4 +94,26 @@ function load3D(parent) {
             generateIcon(database[keys[i]].img, database[keys[i]].name, database[keys[i]].url, parent);
         }
     }
+}
+
+function search(query, parent) {
+    
+
+    sortIcons(document.querySelector(".navSearchInput"), document.querySelector(".icons"), document.querySelectorAll(".icon"));
+
+    var error = document.createElement("div");
+    error.classList.add("error");
+    error.innerHTML = '<i class="fas fa-sad-tear"></i>&nbsp;No Results';
+
+    document.querySelector(".gamesList").appendChild(error);
+
+    if ($('.icon:visible').length) {
+        document.querySelector(".error").remove();
+    }
+
+    var pillow2 = document.createElement("div");
+    pillow2.classList.add("pillow");
+    parent.appendChild(pillow2);
+
+    window.location.href = window.location.origin + '/search.html?query=' + timeData;
 }

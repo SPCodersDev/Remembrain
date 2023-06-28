@@ -7,14 +7,14 @@ nav.innerHTML = (`<div class="navLeft">
                         <a href = "index.html"><i class = "fas fa-brain"></i> Remembrain</a>
                     </div>
                     <div class="navSearch">
-                        <input type="text" class="navSearchInput" placeholder="Search Games..." readonly="" onfocus="this.removeAttribute('readonly');>
+                        <input type="text" class="navSearchInput" placeholder="Search Games...">
                         <i class = "fas fa-search"></i>
                     </div>
                     <div class = "navLink">
                         <a href="home.html">Home</a>
                     </div>
                     <div class="navLink">
-                        <a href="">All Games</a>
+                        <a href="all.html">All Games</a>
                     </div>
                     <div class="navLink">
                         <a href="">Memory</a>
