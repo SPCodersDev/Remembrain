@@ -7,7 +7,7 @@ var tick = document.getElementById('right');
 var cross = document.getElementById('wrong');
 var sartBt = document.getElementById('startBt');
 
-outputLeaderboard("Colour Correlation");
+leaderboardUpdate();
 
 function start() {
     timeBar.classList.add("timeBar");
