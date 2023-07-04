@@ -1,48 +1,46 @@
 .game {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
     user-select: none;
     justify-content: center;
     align-items: center;
-}
-
-.game {
-    width: 100%;
-    height: 100%;
-
     display: grid;
     place-items: center;
     font-family: sans-serif;
-    background: #619ace;
-}
 
-#prg {
-    width: 100%;
-    height: 50px;
-    border: solid 2px #555a;
-    border-radius: 8px;
-    overflow: hidden;
+    width: calc(95vw * 0.8 * 0.9);
+    height: calc(((95vw * 0.8 * 0.9) / 16) * 9);
 }
 
 .con {
     width: calc(95vw * 0.8 * 0.9);
     height: calc(((95vw * 0.8 * 0.9) / 16) * 9);
-    padding-top: 30px;
     margin: auto;
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: space-evenly;
-    background: #619ace;
+    
     font-family: 'Montserrat', sans-serif;
     background-color: whitesmoke;
+    border-radius: 15px;
+}
+
+.topSec {
+    width: 100%;
+    height: calc(((95vw * 0.8 * 0.9) / 16) * 9 * 0.6);
+}
+
+#prg {
+    width: 100%;
+    height: 25px;
+    border: solid 2px #555a;
     border-radius: 8px;
+
+    margin-bottom: -15px;
 }
 
 .timeBar {
     width: 0;
-    height: 200%;
+    height: 100%;
     border-radius: 6px;
     animation: timeBar 1.5s linear infinite;
 }
@@ -66,17 +64,20 @@
 
 #disp {
     width: 100%;
-    height: 150px;
-    border: solid 20px #5555;
+    height: min-content;
+    border: solid 10px #5555;
     border-radius: 16px;
+    padding: 10px;
     display: grid;
+    font-size: 22px;
     place-items: center;
     background: #0004;
     margin: 5px;
+    margin-top: 30px;
 }
 
 #colors {
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .score {
@@ -95,17 +96,17 @@
 }
 
 .control {
-    width: 60%;
+    width: 50%;
     display: flex;
     justify-content: space-between;
-    font-size: 24px;
+    font-size: 10px;
 }
 
 #right,
 #wrong {
-    width: 150px;
-    height: 150px;
-    font-size: 100px;
+    width: 125px;
+    height: 125px;
+    font-size: 85px;
     border-radius: 50%;
     border: none;
     color: #fff;
@@ -121,7 +122,6 @@
 
 .startBt {
     height: 16px;
-    background-color: blue;
     border: none;
     color: white;
     padding: 32px 64px;
@@ -138,11 +138,13 @@
     border: none;
     color: white;
     border-radius: 8px;
-    padding: 32px 64px;
+    padding: 16px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     margin-bottom: 50px;
+    
+    cursor: pointer;
 }
 
 .clicked {

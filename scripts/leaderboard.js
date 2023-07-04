@@ -29,26 +29,36 @@ function checkLeaderboard(score, game, comparison) {
 
         var winner = false;
 
-        winner = comparison == "higher" ? !scoresArray.some(el => el > score) : !scoresArray.some(el => el < score);
+        for(i = 0; i < scoresArray.length; i++) {
+            if(comparison == "higher") {
+                if(score > scoresArray[i]) {
+                    winner = true;
+                }
+            } else {
+                if(score < scoresArray[i]) {
+                    winner = true;
+                }
+            }
+        }
 
-        if(scoresArray.length < 20) {
+        if(scoresArray.length < 19) {
             winner = true;
         }
 
         if(winner) {
-            if(comparison == "higher") {
-                scoresArray.reverse();
-                namesArray.reverse();
-            }
-
             if(scoresArray.length >= 20) {
-                scoresArray = scoresArray.pop();
-                namesArray = namesArray.pop();
+                scoresArray.pop();
+                namesArray.pop();
             }
 
             if(typeof(scoresArray) != "object") {
                 scoresArray = [scoresArray].flat();
                 namesArray = [namesArray].flat();
+            }
+
+            if(comparison == "higher") {
+                scoresArray.reverse();
+                namesArray.reverse();
             }
 
             var idx = sortedIndex(scoresArray, score);

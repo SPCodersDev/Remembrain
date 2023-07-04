@@ -23,6 +23,10 @@
 
     background-color: gray;
 
+    border: 5px solid gray;
+
+    padding: 5px;
+
     margin-bottom: 5vh;
 
     border-radius: 15px;
