@@ -21,9 +21,7 @@
     max-width: calc(95vw * 0.8 * 0.9);
     max-height: calc(((95vw * 0.8 * 0.9) / 16) * 9);
 
-    background-color: gray;
-
-    border: 5px solid gray;
+    background-color: transparent;
 
     padding: 5px;
 
