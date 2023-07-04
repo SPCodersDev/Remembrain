@@ -99,5 +99,5 @@ var myInt = setInterval(() => {
 }, 1);
 
 function leaderboardUpdate() {
-    window.setTimeout(function() { outputLeaderboard("Colour Correlation") }, 1000);
+    window.setTimeout(function() { outputLeaderboard("Colour Correlation") }, 500);
 }
