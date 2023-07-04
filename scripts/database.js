@@ -2,7 +2,7 @@ var database = {
     "1": {
         img: "/images/icons/169.jpg",
         name: "Colour Correlation",
-        url: "games/game.html",
+        url: "games/colourCorrelation.html",
         section: "Flexibility",
     },
     "2": {

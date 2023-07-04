@@ -11,12 +11,15 @@
 .gameLeft {
     width: calc(95vw * 0.8);
 
-    margin-right: calc(95vw * 0.05);
+    margin-right: calc(95vw * 0.025);
 }
 
 .game {
     width: calc(95vw * 0.8 * 0.9);
     height: calc(((95vw * 0.8 * 0.9) / 16) * 9);
+
+    max-width: calc(95vw * 0.8 * 0.9);
+    max-height: calc(((95vw * 0.8 * 0.9) / 16) * 9);
 
     background-color: gray;
 
@@ -110,7 +113,9 @@
 .gameRight {
     width: calc(95vw * 0.25);
 
-    border: 3px solid var(--blue1);
+    background-color: var(--light);
+
+    padding: 5px;
 
     border-radius: 15px;
 }
@@ -126,7 +131,7 @@
 
     width: auto;
 
-    margin: 1px;
+    margin: 3px;
 
     background-color: var(--blue3);
 
@@ -163,18 +168,25 @@
 
     width: auto;
 
-    margin: 1px;
+    margin: 3px;
 
     background-color: var(--blue4);
 
     color: whitesmoke;
 }
 
-.leaderboardTitle, .leaderboardPoints {
-    font-size: 14px;
-}
-
 .leaderboardPlace {
     font-size: 15px;
     font-weight: bold;
+
+    display: flex;
+    align-items: center;
+}
+
+.leaderboardTitle, .leaderboardPoints {
+    font-size: 14px;
+
+    font-weight: normal;
+
+    margin-left: 7.5px;
 }

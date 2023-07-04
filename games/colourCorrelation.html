@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Colour Correlation | Remembrain</title>
+	<meta name='description' content=''>
+	<meta name="google-signin-client_id"
+		content="1047689252141-p8jbno8o4n5dnebqv7koqq5n87v9o2oa.apps.googleusercontent.com">
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<link rel="icon" href="/brain-solid.svg">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+	<link rel='stylesheet' href='/styles/style.css'>
+	<link rel='stylesheet' href='/styles/game.css'>
+	<link rel='stylesheet' href='/styles/navbar.css'>
+	<link rel='stylesheet' href='/styles/pages.css'>
+	<link rel='stylesheet' href='/games/Colour Correlation/colourCorrelation.css'>
+	<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.15.1/css/all.css'
+		integrity='sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp' crossorigin='anonymous'>
+	<script src='https://kit.fontawesome.com/a2406e7df8.js' crossorigin='anonymous'></script>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.1.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-database.js"></script>
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+
+<body>
+	<div class="navbar">
+	</div>
+
+	<div class="gameContainer">
+		<div class="gameLeft">
+			<div class="game">
+				<div class="con">
+					<div id="prg" class="prg">
+						<div id="timeBar"></div>
+					</div>
+					<div id="disp">
+						<h1 id="colors"></h1>
+					</div>
+					<div class="score">
+						<h2 id="scr">0</h2>
+					</div>
+					<div class="control">
+						<button onclick="right()" id="right">&#10004;</button>
+						<button onclick="wrong()" id="wrong">&#10008;</button>
+					</div>
+					<div class="startBt">
+						<button onclick="start()" id="startBt">Start</button>
+					</div>
+				</div>
+				<script src="https://www.drv.tw/inc/wd.js?s=0juotfh68kemhwijcgke3a"></script>
+			</div>
+			<div class="gameDetails">
+				<div class="gameDetailTitle">Colour Correlation</div>
+				<div class="gameDetailBox">
+					<div class="gameDetailBoxDetail">
+						<b>How To Play: </b>
+					</div>
+					<div class="gameDetailBoxDetail">
+						<b>Version: </b>
+					</div>
+					<div class="gameDetailBoxDetail">
+						<b>Date Added: </b>
+					</div>
+					<div class="gameDetailBoxDetail">
+						<b>Section: </b>
+					</div>
+					<div class="gameDetailTextIcons">
+						<button class="gameDetailTextIcon">
+							<i class="fa-solid fa-brain"></i>
+						</button>
+						<button class="gameDetailTextIcon">
+							<i class="fa-solid fa-hand-fist"></i>
+						</button>
+						<button class="gameDetailTextIcon">
+							<i class="fa-solid fa-bolt-lightning"></i>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="gameRight">
+			<div class="gameRightTitle">Leaderboard</div>
+			<div class="leaderboard">
+
+			</div>
+		</div>
+	</div>
+
+	<script src='/scripts/init.js' async defer></script>
+	<script src='/scripts/script.js' async defer></script>
+	<script src='/scripts/redirect.js' async defer></script>
+	<script src='/scripts/navbar.js'></script>
+	<script src='/scripts/database.js'></script>
+	<script src='/scripts/game.js'></script>
+	<script src='/scripts/pages.js'></script>
+</body>
+
+</html>

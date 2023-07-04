@@ -16,4 +16,16 @@ if(window.location.href.includes("/games/")) {
     leaderboardScript.src = '/scripts/leaderboard.js';
 
     document.body.appendChild(leaderboardScript);
+
+    if(window.location.href.includes("/games/game.html")) {
+        var gameScript = document.createElement("script");
+        gameScript.src = '/scripts/game.js';
+
+        document.body.appendChild(gameScript);
+    } else if(window.location.href.includes("/games/colourCorrelation.html")) {
+        var gameScript = document.createElement("script");
+        gameScript.src = '/games/Colour Correlation/colourCorrelation.js';
+
+        document.body.appendChild(gameScript);
+    }
 }
