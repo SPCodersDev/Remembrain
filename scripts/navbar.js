@@ -4,23 +4,23 @@ nav.innerHTML = "";
 
 nav.innerHTML = (`<div class="navLeft">
                     <div class="navLogo">
-                        <a href = "index.html"><i class = "fas fa-brain"></i> Remembrain</a>
+                        <a href = "/index.html"><i class = "fas fa-brain"></i> Remembrain</a>
                     </div>
                     <div class="navSearch">
                         <input type="text" class="navSearchInput" placeholder="Search Games...">
                         <i class = "fas fa-search"></i>
                     </div>
                     <div class = "navLink">
-                        <a href="home.html">Home</a>
+                        <a href="/home.html">Home</a>
                     </div>
                     <div class="navLink">
-                        <a href="all.html">All Games</a>
+                        <a href="/all.html">All Games</a>
                     </div>
                     <div class="navLink">
-                        <a href="">Memory</a>
+                        <a href="/">Memory</a>
                     </div>
                     <div class="navLink">
-                        <a href="">Logic</a>
+                        <a href="/">Logic</a>
                     </div>
                 </div>
                 <div class="navRight">
@@ -31,7 +31,7 @@ nav.innerHTML = (`<div class="navLeft">
                             <i style="font-size: 30px;" class="fas fa-user-circle"></i>
                         </span>
                         <div class="info">
-                            <a href="settings.html"><i class="fas fa-cog"></i>&nbsp;&nbsp;Settings</a>
+                            <a href="/settings.html"><i class="fas fa-cog"></i>&nbsp;&nbsp;Settings</a>
                             <br>
                             <button id="signOut"><i class="fas fa-sign-out-alt"></i>&nbsp;&nbsp;Log Out</button>
                         </div>
@@ -67,6 +67,6 @@ $("#signOut").on("click", function () {
     localStorage.rememberMe = JSON.stringify(false);
 
     window.setTimeout(function () {
-        window.location.href = "login.html";
+        window.location.href = "/login.html";
     }, 100);
 });

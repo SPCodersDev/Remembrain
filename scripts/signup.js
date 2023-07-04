@@ -1,5 +1,5 @@
 if (JSON.parse(localStorage.getItem("loggedIn"))) {
-    window.location.href = "home.html"
+    window.location.href = "/home.html"
 }
 
 var cont;
@@ -98,7 +98,7 @@ function validate() {
                     localStorage.setItem("loggedIn", JSON.stringify(true));
 
                     window.setTimeout(function () {
-                      window.location.href = "home.html";
+                      window.location.href = "/home.html";
                     }, 100);
                 })
                 .catch((error) => {

@@ -32,7 +32,7 @@ if (localStorage.loggedIn == null || !JSON.parse(localStorage.loggedIn)) {
     topBarRightLink.classList.add("topBarRightLink");
 
     var topBarLogin = document.createElement("a");
-    topBarLogin.href = "login.html";
+    topBarLogin.href = "/login.html";
     topBarLogin.classList.add("topBarLogin");
     topBarLogin.innerHTML = "Log In";
 
@@ -44,7 +44,7 @@ if (localStorage.loggedIn == null || !JSON.parse(localStorage.loggedIn)) {
     topBarRightLink.classList.add("topBarRightLink");
 
     var topBarSignup = document.createElement("a");
-    topBarSignup.href = "signup.html";
+    topBarSignup.href = "/signup.html";
     topBarSignup.classList.add("topBarSignup");
     topBarSignup.innerHTML = "Sign Up"
 
@@ -56,7 +56,7 @@ if (localStorage.loggedIn == null || !JSON.parse(localStorage.loggedIn)) {
     topBarRightLink.classList.add("topBarRightLink");
 
     var topBarHome = document.createElement("a");
-    topBarHome.href = "home.html";
+    topBarHome.href = "/home.html";
     topBarHome.classList.add("topBarLogin");
     topBarHome.innerHTML = "Home"
 

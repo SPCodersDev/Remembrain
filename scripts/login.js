@@ -1,5 +1,5 @@
 if (JSON.parse(localStorage.getItem("loggedIn"))) {
-  window.location.href = "home.html"
+  window.location.href = "/home.html"
 }
 
 var cont;
@@ -93,7 +93,7 @@ function signInWithEmailPassword() {
       localStorage.setItem("rememberMe", JSON.stringify(document.getElementById("rem").checked));
 
       window.setTimeout(function () {
-        window.location.href = "home.html";
+        window.location.href = "/home.html";
       }, 100);
     })
     .catch((error) => {

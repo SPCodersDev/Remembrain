@@ -1,3 +1,3 @@
 $(".navSearchInput").on("change", function() {
-    search
+    search(document.querySelector(".navSearchInput").value);
 })

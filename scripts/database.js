@@ -1,20 +1,20 @@
 var database = {
     "1": {
-        img: "images/icons/169.jpg",
-        name: "Colour Match",
-        url: "icons/filler.html",
+        img: "/images/icons/169.jpg",
+        name: "Colour Correlation",
+        url: "games/game.html",
         section: "Flexibility",
     },
     "2": {
-        img: "images/icons/169.jpg",
-        name: "Memory Cards",
-        url: "icons/filler.html",
-        section: "memory",
+        img: "/images/icons/169.jpg",
+        name: "Memory Match",
+        url: "games/game.html",
+        section: "Memory",
     },
     "3": {
-        img: "images/icons/169.jpg",
+        img: "/images/icons/169.jpg",
         name: "Typing Test",
-        url: "icons/filler.html",
+        url: "games/game.html",
         section: "Speed",
     },
 };
@@ -51,12 +51,9 @@ function loadAll(parent) {
     }
 }
 
-function sortIcons(input2, ul2, li2) {
+function sortIcons(input, ul, li) {
     var i;
-    var input = input2;
-    var filter = input.value.toLowerCase();
-    var ul = ul2;
-    var li = li2;
+    var filter = input.toLowerCase();
     for (i = 0; i < li.length; i++) {
         var a = li[i].getElementsByTagName("div")[0];
         var txtValue = a.textContent || a.innerText;
@@ -96,24 +93,21 @@ function load3D(parent) {
     }
 }
 
-function search(query, parent) {
+function search(query) {
     
+    // var error = document.createElement("div");
+    // error.classList.add("error");
+    // error.innerHTML = '<i class="fas fa-sad-tear"></i>&nbsp;No Results';
 
-    sortIcons(document.querySelector(".navSearchInput"), document.querySelector(".icons"), document.querySelectorAll(".icon"));
+    // document.querySelector(".gamesList").appendChild(error);
 
-    var error = document.createElement("div");
-    error.classList.add("error");
-    error.innerHTML = '<i class="fas fa-sad-tear"></i>&nbsp;No Results';
+    // if ($('.icon:visible').length) {
+    //     document.querySelector(".error").remove();
+    // }
 
-    document.querySelector(".gamesList").appendChild(error);
+    // var pillow2 = document.createElement("div");
+    // pillow2.classList.add("pillow");
+    // parent.appendChild(pillow2);
 
-    if ($('.icon:visible').length) {
-        document.querySelector(".error").remove();
-    }
-
-    var pillow2 = document.createElement("div");
-    pillow2.classList.add("pillow");
-    parent.appendChild(pillow2);
-
-    window.location.href = window.location.origin + '/search.html?query=' + timeData;
+    window.location.href = window.location.origin + '/search.html?query=' + query;
 }
