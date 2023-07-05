@@ -65,6 +65,12 @@ if (localStorage.loggedIn == null || !JSON.parse(localStorage.loggedIn)) {
 }
 
 if(innerWidth < innerHeight) {
-    $(".topBarRight").hide();
+    $(".topBarRight").html('');
+    $(".topBarRight").html("Remembrain Is Not Available For Mobile");
+    $(".topBarRight").css("width", "200px");
+    $(".topBarRight").css("margin-right", "10px");
+    $(".topBarRight").css("text-align", "end");
+    $(".topBarRight").css("font-style", "italic");
+    $(".topBarRight").css("font-size", "14px");
     $(".getStarted").hide();
 }

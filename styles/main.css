@@ -133,3 +133,14 @@
     width: 100%;
     min-height: calc(100% - 8vh);
 }
+
+.mainText {
+    padding: 50px;
+    padding-top: 20px;
+}
+
+.mainTitle {
+    font-size: 55px;
+
+    font-weight: 500;
+}
