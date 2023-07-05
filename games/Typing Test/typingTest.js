@@ -34,6 +34,8 @@ maxTime = 60,
 timeLeft = maxTime,
 charIndex = mistakes = isTyping = 0;
 
+leaderboardUpdate();
+
 function loadParagraph() {
     const ranIndex = Math.floor(Math.random() * paragraphs.length);
     typingText.innerHTML = "";
@@ -49,6 +51,10 @@ function loadParagraph() {
 function initTyping() {
     let characters = typingText.querySelectorAll("span");
     let typedChar = inpField.value.split("")[charIndex];
+
+    let wpm = Math.round(((charIndex - mistakes)  / 5) / (maxTime - timeLeft) * 60);
+    wpm = wpm < 0 || !wpm || wpm === Infinity ? 0 : wpm;
+
     if(charIndex < characters.length - 1 && timeLeft > 0) {
         if(!isTyping) {
             timer = setInterval(initTimer, 1000);
@@ -73,14 +79,13 @@ function initTyping() {
         }
         characters.forEach(span => span.classList.remove("active"));
         characters[charIndex].classList.add("active");
-
-        let wpm = Math.round(((charIndex - mistakes)  / 5) / (maxTime - timeLeft) * 60);
-        wpm = wpm < 0 || !wpm || wpm === Infinity ? 0 : wpm;
         
         wpmTag.innerText = wpm;
         mistakeTag.innerText = mistakes;
         cpmTag.innerText = charIndex - mistakes;
     } else {
+        checkLeaderboard(wpm, "Typing Test", "higher");
+        leaderboardUpdate();
         clearInterval(timer);
         inpField.value = "";
     }   
@@ -112,3 +117,7 @@ function resetGame() {
 loadParagraph();
 inpField.addEventListener("input", initTyping);
 tryAgainBtn.addEventListener("click", resetGame);
+
+function leaderboardUpdate() {
+    window.setTimeout(function() { outputLeaderboard("Typing Test") }, 500);
+}

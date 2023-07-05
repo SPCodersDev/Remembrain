@@ -1,5 +1,5 @@
-// firebase.database().ref('leaderboard/' + "Memory Match").set({
-//     scores: [99.8, 100.4],
+// firebase.database().ref('leaderboard/' + "Typing Test").set({
+//     scores: [2, 1],
 //     names: ["Test Value", "Test Value"],
 // });
 
@@ -114,6 +114,7 @@ function outputLeaderboard(game) {
             leaderboardPoints.classList.add("leaderboardPoints");
             leaderboardPoints.innerHTML = scoresArray[i];
             if(game == "Memory Match") leaderboardPoints.innerHTML += "s";
+            if(game == "Typing Test") leaderboardPoints.innerHTML += " WPM";
 
             leaderboardPart.appendChild(leaderboardPoints);
 
