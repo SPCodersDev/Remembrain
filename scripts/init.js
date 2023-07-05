@@ -24,17 +24,14 @@ if(window.location.href.includes("/games/")) {
 
     var gameName = curPage.split("/")[curPage.split("/").length - 1];
     var gameNameWords = gameName.split(/(?=[A-Z])/);
-    var gameFolderCode = toTitleCase(gameNameWords[0]) + toTitleCase(gameNameWords[1]);
+    var gameFolderCode = toTitleCase(gameNameWords[0]) + " " + toTitleCase(gameNameWords[1]);
 
-    alert('/' + gameFolderCode + '/' + gameName + '.js')
 
-    if(curPage != "game") {
-        gameScript.src = '/games/' + gameName + '.js';
+    if(curPage == "game") {
+        gameScript.src = '/scripts/' + gameName + '.js';
     } else {
-        gameScript.src = '/' + gameFolderCode + '/' + gameName + '.js';
+        gameScript.src = '/games/' + gameFolderCode + '/' + gameName + '.js';
     }
-
-    
 
     document.body.appendChild(gameScript);
 }
@@ -42,7 +39,7 @@ if(window.location.href.includes("/games/")) {
 function toTitleCase(str) {
     return str.replace(
         /\w\S*/g,
-        function(txt) {
+         function(txt) {
             return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
         }
     );
