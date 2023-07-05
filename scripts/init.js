@@ -49,7 +49,7 @@ if(window.location.href.includes("games")) {
     } else if(window.location.href.toLowerCase().includes("memorymatch")) {
         gameScript.src = "/games/Memory Match/memoryMatch.js";
     } else if(window.location.href.toLowerCase().includes("typingtest")) {
-        gameScript.src = "/games/Typing test/typingTest.js";
+        gameScript.src = "/games/Typing Test/typingTest.js";
     }
 
     document.body.appendChild(gameScript);
