@@ -1,7 +1,7 @@
-const cards = document.querySelectorAll(".card"),
-timeTag = document.querySelector(".time b"),
-flipsTag = document.querySelector(".flips b"),
-refreshBtn = document.querySelector(".details button");
+const cards = document.querySelectorAll(".card");
+const timeTag = document.querySelector(".time b");
+const flipsTag = document.querySelector(".flips b");
+const refreshBtn = document.querySelector(".details button");
 
 let maxTime = 0;
 let timeLeft = maxTime;
@@ -10,6 +10,8 @@ let matchedCard = 0;
 let disableDeck = false;
 let isPlaying = false;
 let cardOne, cardTwo, timer;
+
+leaderboardUpdate();
 
 function initTimer() {
     timeTag.style.color = "black";
@@ -40,8 +42,8 @@ function flipCard({target: clickedCard}) {
         }
         cardTwo = clickedCard;
         disableDeck = true;
-        let cardOneImg = cardOne.querySelector(".back-view object").src,
-        cardTwoImg = cardTwo.querySelector(".back-view object").src;
+        let cardOneImg = cardOne.querySelector(".back-view object").data,
+        cardTwoImg = cardTwo.querySelector(".back-view object").data;
         matchCards(cardOneImg, cardTwoImg);
     }
 }
@@ -50,25 +52,29 @@ function matchCards(img1, img2) {
     if(img1 === img2) {
         matchedCard++;
         if(matchedCard == 6) {
-            return clearInterval(timer);
+            clearInterval(timer);
+
+            checkLeaderboard(parseFloat(timeLeft.toFixed(1)), "Memory Match", "lower");
+            leaderboardUpdate();
+            
         }
         cardOne.removeEventListener("click", flipCard);
         cardTwo.removeEventListener("click", flipCard);
         cardOne = cardTwo = "";
-        return disableDeck = false;
-    }
-
-    setTimeout(() => {
-        cardOne.classList.add("shake");
-        cardTwo.classList.add("shake");
-    }, 400);
-
-    setTimeout(() => {
-        cardOne.classList.remove("shake", "flip");
-        cardTwo.classList.remove("shake", "flip");
-        cardOne = cardTwo = "";
         disableDeck = false;
-    }, 1200);
+    } else {
+        setTimeout(() => {
+            cardOne.classList.add("shake");
+            cardTwo.classList.add("shake");
+        }, 400);
+    
+        setTimeout(() => {
+            cardOne.classList.remove("shake", "flip");
+            cardTwo.classList.remove("shake", "flip");
+            cardOne = cardTwo = "";
+            disableDeck = false;
+        }, 1200);
+    }
 }
 
 function shuffleCard() {
@@ -87,7 +93,7 @@ function shuffleCard() {
         card.classList.remove("flip");
         let imgTag = card.querySelector(".back-view object");
         setTimeout(() => {
-            imgTag.data = `/games/Memory Match/images/img-${arr[index]}.svg`;
+            imgTag.src = `/games/Memory Match/images/img-${arr[index]}.svg`;
         }, 500);
         card.addEventListener("click", flipCard);
     });
@@ -100,3 +106,7 @@ refreshBtn.addEventListener("click", shuffleCard);
 cards.forEach(card => {
     card.addEventListener("click", flipCard);
 });
+
+function leaderboardUpdate() {
+    window.setTimeout(function() { outputLeaderboard("Memory Match") }, 500);
+}

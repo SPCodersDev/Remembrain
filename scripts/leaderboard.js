@@ -1,5 +1,5 @@
-// firebase.database().ref('leaderboard/' + "Colour Correlation").set({
-//     scores: [3, 2],
+// firebase.database().ref('leaderboard/' + "Memory Match").set({
+//     scores: [99.8, 100.4],
 //     names: ["Test Value", "Test Value"],
 // });
 
@@ -113,6 +113,7 @@ function outputLeaderboard(game) {
             var leaderboardPoints = document.createElement("div");
             leaderboardPoints.classList.add("leaderboardPoints");
             leaderboardPoints.innerHTML = scoresArray[i];
+            if(game == "Memory Match") leaderboardPoints.innerHTML += "s";
 
             leaderboardPart.appendChild(leaderboardPoints);
 

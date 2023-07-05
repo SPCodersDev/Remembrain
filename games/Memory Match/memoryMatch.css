@@ -10,7 +10,7 @@
 }
 
 p {
-    font-size: 50px;
+    font-size: 30px;
 }
 
 ::selection {
@@ -104,7 +104,7 @@ p {
 }
 
 .card .back-view object {
-    max-width: 40px;
+    max-width: 30px;
 }
 
 .card.flip .front-view {
