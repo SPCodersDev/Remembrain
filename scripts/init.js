@@ -43,10 +43,8 @@ if(window.location.href.includes("games")) {
     document.body.appendChild(leaderboardScript);
 
     var gameScript = document.createElement("script");
-
-    if(window.location.href.includes("game.html")) {
-        gameScript.src = "/scripts/game.js/";
-    } else if(window.location.href.includes("colourCorrelation.html")) {
+    
+    if(window.location.href.includes("colourCorrelation.html")) {
         gameScript.src = "/games/Colour Correlation/colourCorrelation.js";
     } else if(window.location.href.includes("memoryMatch.html")) {
         gameScript.src = "/games/Memory Match/memoryMatch.js";
