@@ -24,7 +24,7 @@ if(window.location.href.includes("/games/")) {
 
     var gameName = curPage.split("/")[curPage.split("/").length - 1];
     var gameNameWords = gameName.split(/(?=[A-Z])/);
-    var gameFolderCode = gameNameWords[0].toTitleCase() + gameNameWords[1].toTitleCase();
+    var gameFolderCode = toTitleCase(gameNameWords[0]) + toTitleCase(gameNameWords[1]);
 
     alert('/' + gameFolderCode + '/' + gameName + '.js')
 
@@ -37,4 +37,13 @@ if(window.location.href.includes("/games/")) {
     
 
     document.body.appendChild(gameScript);
+}
+
+function toTitleCase(str) {
+    return str.replace(
+        /\w\S*/g,
+        function(txt) {
+            return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+        }
+    );
 }
