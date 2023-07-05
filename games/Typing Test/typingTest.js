@@ -32,7 +32,7 @@ cpmTag = document.querySelector(".cpm span");
 var updated = false;
 
 let timer,
-maxTime = 10,
+maxTime = 60,
 timeLeft = maxTime,
 charIndex = mistakes = isTyping = 0;
 
