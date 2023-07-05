@@ -8,13 +8,13 @@ var database = {
     "2": {
         img: "/images/icons/169.jpg",
         name: "Memory Match",
-        url: "games/game.html",
+        url: "games/memoryMatch.html",
         section: "Memory",
     },
     "3": {
         img: "/images/icons/169.jpg",
         name: "Typing Test",
-        url: "games/game.html",
+        url: "games/typingTest.html",
         section: "Speed",
     },
 };

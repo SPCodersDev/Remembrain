@@ -17,15 +17,24 @@ if(window.location.href.includes("/games/")) {
 
     document.body.appendChild(leaderboardScript);
 
-    if(window.location.href.includes("/games/game.html")) {
-        var gameScript = document.createElement("script");
-        gameScript.src = '/scripts/game.js';
+    var gameScript = document.createElement("script");
 
-        document.body.appendChild(gameScript);
-    } else if(window.location.href.includes("/games/colourCorrelation.html")) {
-        var gameScript = document.createElement("script");
-        gameScript.src = '/games/Colour Correlation/colourCorrelation.js';
+    var windowRef = window.location.href;
+    var curPage = windowRef.substring(windowRef.lastIndexOf("/games/"), windowRef.indexOf(".html"));
 
-        document.body.appendChild(gameScript);
+    var gameName = curPage.split("/")[curPage.split("/").length - 1];
+    var gameNameWords = gameName.split(/(?=[A-Z])/);
+    var gameFolderCode = gameNameWords[0].toTitleCase() + gameNameWords[1].toTitleCase();
+
+    alert('/' + gameFolderCode + '/' + gameName + '.js')
+
+    if(curPage != "game") {
+        gameScript.src = '/games/' + gameName + '.js';
+    } else {
+        gameScript.src = '/' + gameFolderCode + '/' + gameName + '.js';
     }
+
+    
+
+    document.body.appendChild(gameScript);
 }
