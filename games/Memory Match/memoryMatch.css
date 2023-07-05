@@ -96,7 +96,7 @@ p {
 }
 
 .card .front-view img {
-    max-width: 17px;
+    /* max- */width: 17px;
 }
 
 .card .back-view {
@@ -104,7 +104,7 @@ p {
 }
 
 .card .back-view object {
-    max-width: 30px;
+    /* max-*/width: 30px; 
 }
 
 .card.flip .front-view {
