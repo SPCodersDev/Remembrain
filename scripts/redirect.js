@@ -9,7 +9,8 @@ if(!window.location.href.includes(".html")) {
         if (JSON.parse(localStorage.loggedIn)) {
             window.location.href = "/home.html";
         } 
-    } else if (window.location.href.includes("home.html") || window.location.href.includes("all.html") || window.location.href.includes("search.html") || window.location.href.includes("/games/") || window.location.href.includes("settings.html")) {            if (!JSON.parse(localStorage.loggedIn)) {
+    } else if (window.location.href.includes("home.html") || window.location.href.includes("all.html") || window.location.href.includes("search.html") || window.location.href.includes("games") || window.location.href.includes("settings.html")) {            
+        if (!JSON.parse(localStorage.loggedIn)) {
             window.location.href = "/login.html";
         }
     } else if(!window.location.href.includes("index.html") && !window.location.href.includes("about.html") && !window.location.href.includes("contact.html")) {
