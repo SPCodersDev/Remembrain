@@ -11,7 +11,32 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
-if(window.location.href.includes("/games/")) {
+// if(window.location.href.includes("/games/")) {
+//     var leaderboardScript = document.createElement("script");
+//     leaderboardScript.src = '/scripts/leaderboard.js';
+
+//     document.body.appendChild(leaderboardScript);
+
+//     var gameScript = document.createElement("script");
+
+//     var windowRef = window.location.pathname;
+//     var curPage = windowRef.substring(windowRef.lastIndexOf("/games/"), windowRef.indexOf(".html"));
+
+//     var gameName = curPage.split("/")[curPage.split("/").length - 1];
+//     var gameNameWords = gameName.split(/(?=[A-Z])/);
+//     var gameFolderCode = toTitleCase(gameNameWords[0]) + " " + toTitleCase(gameNameWords[1]);
+
+
+//     if(curPage == "game") {
+//         gameScript.src = '/scripts/' + gameName + '.js';
+//     } else {
+//         gameScript.src = '/games/' + gameFolderCode + '/' + gameName + '.js';
+//     }
+
+//     document.body.appendChild(gameScript);
+// }
+
+if(window.location.href.includes("games")) {
     var leaderboardScript = document.createElement("script");
     leaderboardScript.src = '/scripts/leaderboard.js';
 
@@ -19,18 +44,14 @@ if(window.location.href.includes("/games/")) {
 
     var gameScript = document.createElement("script");
 
-    var windowRef = window.location.pathname;
-    var curPage = windowRef.substring(windowRef.lastIndexOf("/games/"), windowRef.indexOf(".html"));
-
-    var gameName = curPage.split("/")[curPage.split("/").length - 1];
-    var gameNameWords = gameName.split(/(?=[A-Z])/);
-    var gameFolderCode = toTitleCase(gameNameWords[0]) + " " + toTitleCase(gameNameWords[1]);
-
-
-    if(curPage == "game") {
-        gameScript.src = '/scripts/' + gameName + '.js';
-    } else {
-        gameScript.src = '/games/' + gameFolderCode + '/' + gameName + '.js';
+    if(window.location.href.includes("game.html")) {
+        gameScript.src = "/scripts/game.js/";
+    } else if(window.location.href.includes("colourCorrelation.html")) {
+        gameScript.src = "/games/Colour Correlation/colourCorrelation.js";
+    } else if(window.location.href.includes("memoryMatch.html")) {
+        gameScript.src = "/games/Memory Match/memoryMatch.js";
+    } else if(window.location.href.includes("typingTest.html")) {
+        gameScript.src = "/games/Typing test/typingTest.js";
     }
 
     document.body.appendChild(gameScript);
