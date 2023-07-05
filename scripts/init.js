@@ -44,11 +44,11 @@ if(window.location.href.includes("games")) {
 
     var gameScript = document.createElement("script");
     
-    if(window.location.href.includes("colourcorrelation")) {
+    if(window.location.href.toLowerCase().includes("colourcorrelation")) {
         gameScript.src = "/games/Colour Correlation/colourCorrelation.js";
-    } else if(window.location.href.includes("memorymatch")) {
+    } else if(window.location.href.toLowerCase().includes("memorymatch")) {
         gameScript.src = "/games/Memory Match/memoryMatch.js";
-    } else if(window.location.href.includes("typingtest")) {
+    } else if(window.location.href.toLowerCase().includes("typingtest")) {
         gameScript.src = "/games/Typing test/typingTest.js";
     }
 
