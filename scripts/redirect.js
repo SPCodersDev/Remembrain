@@ -1,5 +1,5 @@
-if(!window.location.href.includes(".html")) {
-    //window.location.href = "/index.html";
+if(!window.location.href.includes(".html") && !window.location.href.includes("games")) {
+    window.location.href = "/index.html";
 } else {
     if(localStorage.loggedIn == null) {
         localStorage.setItem("loggedIn", JSON.stringify(false));
