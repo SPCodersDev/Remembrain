@@ -37,7 +37,7 @@
     width: 100%;
     height: 30px;
     border: solid 5px rgba(118, 118, 118, 0.667);
-    border-radius: 15px;
+    border-radius: 10px;
 
     margin-bottom: -15px;
 }
@@ -45,7 +45,7 @@
 .timeBar {
     width: 0;
     height: 100%;
-    border-radius: 6px;
+    border-radius: 2px;
     animation: timeBar 1.5s linear infinite;
 }
 
@@ -70,7 +70,7 @@
     width: 100%;
     height: min-content;
     border: solid 10px #93939355;
-    border-radius: 25px;
+    border-radius: 15px;
     padding: 10px;
     display: grid;
     font-size: 20px;
@@ -109,9 +109,9 @@
 
 #right,
 #wrong {
-    width: 125px;
-    height: 125px;
-    font-size: 85px;
+    width: 7.5vw;
+    height: 7.5vw;
+    font-size: 5vw;
     border-radius: 50%;
     border: none;
     color: #fff;
@@ -141,7 +141,7 @@
 }
 
 #startBt {
-    font-size: 30px;
+    font-size: 2vw;
     padding: 4px 8px;
     background-color: #234082;
     border: none;

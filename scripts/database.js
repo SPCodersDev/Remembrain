@@ -1,6 +1,6 @@
 var database = {
     "1": {
-        img: "/images/icons/169.jpg",
+        img: "/images/icons/colourCorrelation.jpeg",
         name: "Colour Correlation",
         url: "games/colourCorrelation.html",
         section: "Flexibility",

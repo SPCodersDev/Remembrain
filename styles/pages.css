@@ -39,7 +39,7 @@
 
 .iconImg {
     width: 230px;
-    height: min-content;
+    height: calc(230px / 16 * 9);
     border-radius: 10px;
 }
 
