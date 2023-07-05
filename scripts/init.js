@@ -19,7 +19,7 @@ if(window.location.href.includes("/games/")) {
 
     var gameScript = document.createElement("script");
 
-    var windowRef = window.location.href;
+    var windowRef = window.location.pathname;
     var curPage = windowRef.substring(windowRef.lastIndexOf("/games/"), windowRef.indexOf(".html"));
 
     var gameName = curPage.split("/")[curPage.split("/").length - 1];
