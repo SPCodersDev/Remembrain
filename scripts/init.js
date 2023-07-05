@@ -44,11 +44,11 @@ if(window.location.href.includes("games")) {
 
     var gameScript = document.createElement("script");
     
-    if(window.location.href.includes("colourCorrelation.html")) {
+    if(window.location.href.includes("colourcorrelation")) {
         gameScript.src = "/games/Colour Correlation/colourCorrelation.js";
-    } else if(window.location.href.includes("memoryMatch.html")) {
+    } else if(window.location.href.includes("memorymatch")) {
         gameScript.src = "/games/Memory Match/memoryMatch.js";
-    } else if(window.location.href.includes("typingTest.html")) {
+    } else if(window.location.href.includes("typingtest")) {
         gameScript.src = "/games/Typing test/typingTest.js";
     }
 
