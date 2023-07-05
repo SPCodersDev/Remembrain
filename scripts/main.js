@@ -8,10 +8,10 @@ topBar.innerHTML = (`<div class="topBarLeft">
                             <div class="topBarLeftText">Remembrain</div>
                         </a>
                         <div class="topBarSec">
-                            <a href="about.html" target = "_blank">About</a>
+                            <a href="about.html">About</a>
                         </div>
                         <div class="topBarSec">
-                            <a href="contact.html" target = "_blank">Contact Us</a>
+                            <a href="contact.html">Contact Us</a>
                         </div>
                     </div>
                     <div class="topBarRight">

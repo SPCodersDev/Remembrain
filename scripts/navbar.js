@@ -16,12 +16,6 @@ nav.innerHTML = (`<div class="navLeft">
                     <div class="navLink">
                         <a href="/all.html">All Games</a>
                     </div>
-                    <div class="navLink">
-                        <a href="/">Memory</a>
-                    </div>
-                    <div class="navLink">
-                        <a href="/">Logic</a>
-                    </div>
                 </div>
                 <div class="navRight">
                     <div id="popup" style="display: none;">

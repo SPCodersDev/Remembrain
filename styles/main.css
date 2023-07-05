@@ -144,3 +144,9 @@
 
     font-weight: 500;
 }
+
+.mainCaption {
+    font-size: 18px;
+
+    margin-top: 15px;
+}
