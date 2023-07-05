@@ -93,8 +93,8 @@ function shuffleCard() {
         card.classList.remove("flip");
         let imgTag = card.querySelector(".back-view object");
         setTimeout(() => {
-            imgTag.src = `/games/Memory Match/images/img-${arr[index]}.svg`;
-        }, 500);
+            imgTag.data = `/games/Memory Match/images/img-${arr[index]}.svg`;
+        }, 100);
         card.addEventListener("click", flipCard);
     });
 }
