@@ -29,12 +29,16 @@ mistakeTag = document.querySelector(".mistake span"),
 wpmTag = document.querySelector(".wpm span"),
 cpmTag = document.querySelector(".cpm span");
 
+var updated = false;
+
 let timer,
-maxTime = 60,
+maxTime = 10,
 timeLeft = maxTime,
 charIndex = mistakes = isTyping = 0;
 
 leaderboardUpdate();
+
+timeEnd();
 
 function loadParagraph() {
     const ranIndex = Math.floor(Math.random() * paragraphs.length);
@@ -84,21 +88,21 @@ function initTyping() {
         mistakeTag.innerText = mistakes;
         cpmTag.innerText = charIndex - mistakes;
     } else {
-        checkLeaderboard(wpm, "Typing Test", "higher");
-        leaderboardUpdate();
         clearInterval(timer);
         inpField.value = "";
     }   
 }
 
 function initTimer() {
+    let wpm = Math.round(((charIndex - mistakes)  / 5) / (maxTime - timeLeft) * 60);
+    wpm = wpm < 0 || !wpm || wpm === Infinity ? 0 : wpm;    
     if(timeLeft > 0) {
         timeLeft--;
         timeTag.innerText = timeLeft;
-        let wpm = Math.round(((charIndex - mistakes)  / 5) / (maxTime - timeLeft) * 60);
         wpmTag.innerText = wpm;
     } else {
         clearInterval(timer);
+        inpField.value = "";
     }
 }
 
@@ -112,6 +116,24 @@ function resetGame() {
     wpmTag.innerText = 0;
     mistakeTag.innerText = 0;
     cpmTag.innerText = 0;
+    updated = false;
+}
+
+function timeEnd() {
+    if(timeLeft > 0) {
+        setTimeout(timeEnd, 500);
+        return;
+    }
+
+    let wpm = Math.round(((charIndex - mistakes)  / 5) / (maxTime - timeLeft) * 60);
+    wpm = wpm < 0 || !wpm || wpm === Infinity ? 0 : wpm;    
+
+    if(!updated && wpm > 0) {
+        checkLeaderboard(parseInt(document.getElementById("wpm").innerHTML), "Typing Test", "higher");
+        leaderboardUpdate();
+
+        updated = true;
+    }
 }
 
 loadParagraph();
