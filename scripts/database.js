@@ -12,7 +12,7 @@ var database = {
         section: "Memory",
     },
     "3": {
-        img: "/images/icons/169.jpg",
+        img: "/images/icons/typingTest.jpeg",
         name: "Typing Test",
         url: "games/typingTest.html",
         section: "Speed",
