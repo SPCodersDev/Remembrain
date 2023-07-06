@@ -54,7 +54,7 @@ function matchCards(img1, img2) {
         if(matchedCard == 6) {
             clearInterval(timer);
 
-            checkLeaderboard(parseFloat(timeLeft.toFixed(1)), "Memory Match", "lower");
+            checkLeaderboard(parseFloat(Math.floor(timeLeft * 10) / 10), "Memory Match", "lower");
             leaderboardUpdate();
             
         }
