@@ -16,7 +16,7 @@ function start() {
 }
 
 function out() {
-    colors.innerText = `Game Over: Score - ${score}`;
+    colors.innerText = `Game Over - Score: ${score}`;
     checkLeaderboard(score, "Colour Correlation", "higher");
     leaderboardUpdate();
     colors.style.color = "black";

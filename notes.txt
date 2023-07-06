@@ -1,5 +1,6 @@
 typing:
-fix paragraphs
 text wrap
 
 thumbnails
+
+reverse db order manually then make home page loadnew

@@ -44,12 +44,20 @@ function generateIcon(img, name, url, parent) {
 
 function loadAll(parent) {
     var keys = Object.keys(database);
-    var test = keys.reverse();
 
-    for (i = 0; i < test.length; i++) {
-        generateIcon(database[test[i]].img, database[test[i]].name, database[test[i]].url, parent);
+    for (i = 0; i < keys.length; i++) {
+        generateIcon(database[keys[i]].img, database[keys[i]].name, database[keys[i]].url, parent);
     }
 }
+
+function loadNew(parent) {
+    var keys = Object.keys(database);
+    var newKeys = keys.reverse();
+
+    for(i = 0; i < keys.length; i++) {
+        generateIcon(database[newKeys[i]].img, database[newKeys[i]].name, database[newKeys[i]].url, parent);
+    }
+} 
 
 function sortIcons(input, ul, li) {
     var i;
