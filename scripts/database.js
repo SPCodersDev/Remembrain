@@ -6,7 +6,7 @@ var database = {
         section: "Flexibility",
     },
     "2": {
-        img: "/images/icons/169.jpg",
+        img: "/images/icons/memoryMatch.jpeg",
         name: "Memory Match",
         url: "games/memoryMatch.html",
         section: "Memory",
