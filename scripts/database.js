@@ -1,10 +1,10 @@
 var database = {
     "1": {
-        img: "/images/icons/colourCorrelation.jpeg",
-        name: "Colour Correlation",
-        url: "games/colourCorrelation.html",
-        section: "Flexibility",
-    },
+        img: "/images/icons/typingTest.jpeg",
+        name: "Typing Test",
+        url: "games/typingTest.html",
+        section: "Speed",
+    }, 
     "2": {
         img: "/images/icons/memoryMatch.jpeg",
         name: "Memory Match",
@@ -12,11 +12,11 @@ var database = {
         section: "Memory",
     },
     "3": {
-        img: "/images/icons/typingTest.jpeg",
-        name: "Typing Test",
-        url: "games/typingTest.html",
-        section: "Speed",
-    },
+        img: "/images/icons/colourCorrelation.jpeg",
+        name: "Colour Correlation",
+        url: "games/colourCorrelation.html",
+        section: "Flexibility",
+    }, 
 };
 
 function generateIcon(img, name, url, parent) {

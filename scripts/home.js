@@ -1,1 +1,1 @@
-loadAll(document.querySelector(".icons"));
+loadNew(document.querySelector(".icons"));
