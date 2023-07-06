@@ -1,7 +1,5 @@
 typing:
-write descriptions
 fix paragraphs
-leaderboard
 text wrap
 
 thumbnails
