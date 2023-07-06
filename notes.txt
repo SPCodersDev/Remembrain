@@ -1,4 +1,0 @@
-typing:
-text wrap
-
-reverse db order manually then make home page loadnew
