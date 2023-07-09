@@ -11,6 +11,12 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
+var analyticsScript = document.createElement("script");
+analyticsScript.src = "https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js";
+document.head.appendChild(analyticsScript);
+
+const analytics = getAnalytics(app);
+
 // if(window.location.href.includes("/games/")) {
 //     var leaderboardScript = document.createElement("script");
 //     leaderboardScript.src = '/scripts/leaderboard.js';
