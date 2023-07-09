@@ -15,7 +15,9 @@ var analyticsScript = document.createElement("script");
 analyticsScript.src = "https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js";
 document.head.appendChild(analyticsScript);
 
-const analytics = getAnalytics(app);
+const analytics = firebase.analytics();
+
+console.log(analytics)
 
 // if(window.location.href.includes("/games/")) {
 //     var leaderboardScript = document.createElement("script");
