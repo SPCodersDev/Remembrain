@@ -1,8 +1,8 @@
 var nav = document.querySelector(".navbar");
 
-nav.textContent = "";
+nav.innerHTML = "";
 
-nav.textContent = (`<div class="navLeft">
+nav.innerHTML = (`<div class="navLeft">
                     <div class="navLogo">
                         <a href = "/index.html"><i class = "fas fa-brain"></i> Remembrain</a>
                     </div>
@@ -44,12 +44,12 @@ nav.textContent = (`<div class="navLeft">
 $("#enterName").html(JSON.parse(localStorage.entity).name)
 
 document.querySelector(".person").addEventListener("click", function () {
-    if (document.querySelector(".openPopup").textContent.includes("down")) {
-        document.querySelector(".openPopup").textContent = '<i class="fas fa-chevron-up"></i>';
+    if (document.querySelector(".openPopup").innerHTML.includes("down")) {
+        document.querySelector(".openPopup").innerHTML = '<i class="fas fa-chevron-up"></i>';
 
         document.getElementById("popup").style.display = "inline-block";
     } else {
-        document.querySelector(".openPopup").textContent = '<i class="fas fa-chevron-down"></i>';
+        document.querySelector(".openPopup").innerHTML = '<i class="fas fa-chevron-down"></i>';
 
         document.getElementById("popup").style.display = "none";
     }
