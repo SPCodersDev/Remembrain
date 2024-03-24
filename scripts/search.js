@@ -18,7 +18,7 @@ for(i = 0; i < allIcons.length; i++) {
 if(!allShown) {
     var error = document.createElement("div");
     error.classList.add("error");
-    error.innerHTML = '<i class="fas fa-sad-tear"></i>&nbsp;No Results';
+    error.textContent = '<i class="fas fa-sad-tear"></i>&nbsp;No Results';
 
     document.querySelector(".icons").appendChild(error);
 

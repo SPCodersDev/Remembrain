@@ -92,7 +92,7 @@ function outputLeaderboard(game) {
 
         var leaderboardDiv = document.querySelector(".leaderboard");
 
-        leaderboardDiv.innerHTML = "";
+        leaderboardDiv.textContent = "";
 
         for(i = 0; i < scoresArray.length; i++) {
             var leaderboardPart = document.createElement("div");
@@ -100,11 +100,11 @@ function outputLeaderboard(game) {
 
             var leaderboardPlace = document.createElement("div");
             leaderboardPlace.classList.add("leaderboardPlace");
-            leaderboardPlace.innerHTML = i + 1;
+            leaderboardPlace.textContent = i + 1;
 
             var leaderboardTitle = document.createElement("div");
             leaderboardTitle.classList.add("leaderboardTitle");
-            leaderboardTitle.innerHTML = namesArray[i];
+            leaderboardTitle.textContent = namesArray[i];
 
             leaderboardPlace.appendChild(leaderboardTitle);
 
@@ -112,9 +112,9 @@ function outputLeaderboard(game) {
 
             var leaderboardPoints = document.createElement("div");
             leaderboardPoints.classList.add("leaderboardPoints");
-            leaderboardPoints.innerHTML = scoresArray[i];
-            if(game == "Memory Match") leaderboardPoints.innerHTML += "s";
-            if(game == "Typing Test") leaderboardPoints.innerHTML += " WPM";
+            leaderboardPoints.textContent = scoresArray[i];
+            if(game == "Memory Match") leaderboardPoints.textContent += "s";
+            if(game == "Typing Test") leaderboardPoints.textContent += " WPM";
 
             leaderboardPart.appendChild(leaderboardPoints);
 

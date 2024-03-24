@@ -1,8 +1,8 @@
 var topBar = document.querySelector(".topBar");
 
-topBar.innerHTML = "";
+topBar.textContent = "";
 
-topBar.innerHTML = (`<div class="topBarLeft">
+topBar.textContent = (`<div class="topBarLeft">
                         <a href = "index.html" class = "topBarLogo">
                             <i class = "fas fa-brain"></i>
                             <div class="topBarLeftText">Remembrain</div>
@@ -25,7 +25,7 @@ topBar.innerHTML = (`<div class="topBarLeft">
 
 var topBarRight = document.querySelector(".topBarRight");
 
-topBarRight.innerHTML = "";
+topBarRight.textContent = "";
 
 if (localStorage.loggedIn == null || !JSON.parse(localStorage.loggedIn)) {
     var topBarRightLink = document.createElement("div");
@@ -34,7 +34,7 @@ if (localStorage.loggedIn == null || !JSON.parse(localStorage.loggedIn)) {
     var topBarLogin = document.createElement("a");
     topBarLogin.href = "/login.html";
     topBarLogin.classList.add("topBarLogin");
-    topBarLogin.innerHTML = "Log In";
+    topBarLogin.textContent = "Log In";
 
     topBarRightLink.appendChild(topBarLogin);
 
@@ -46,7 +46,7 @@ if (localStorage.loggedIn == null || !JSON.parse(localStorage.loggedIn)) {
     var topBarSignup = document.createElement("a");
     topBarSignup.href = "/signup.html";
     topBarSignup.classList.add("topBarSignup");
-    topBarSignup.innerHTML = "Sign Up"
+    topBarSignup.textContent = "Sign Up"
 
     topBarRightLink.appendChild(topBarSignup);
 
@@ -58,7 +58,7 @@ if (localStorage.loggedIn == null || !JSON.parse(localStorage.loggedIn)) {
     var topBarHome = document.createElement("a");
     topBarHome.href = "/home.html";
     topBarHome.classList.add("topBarLogin");
-    topBarHome.innerHTML = "Home"
+    topBarHome.textContent = "Home"
 
     topBarRightLink.appendChild(topBarHome);
     topBarRight.appendChild(topBarRightLink);

@@ -10,17 +10,17 @@ var passwordError2 = document.querySelector(".errorPassword2");
 
 function emailErrorShow(value) {
     emailError.style.display = "block";
-    emailError.innerHTML = value;
+    emailError.textContent = value;
 }
 
 function passwordErrorShow(value) {
     passwordError.style.display = "block";
-    passwordError.innerHTML = value;
+    passwordError.textContent = value;
 }
 
 function passwordErrorShow2(value) {
     passwordError2.style.display = "block";
-    passwordError2.innerHTML = value;
+    passwordError2.textContent = value;
 }
 
 var loginBtn = document.querySelector(".signupButton");

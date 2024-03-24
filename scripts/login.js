@@ -9,12 +9,12 @@ var passwordError = document.querySelector(".errorPassword");
 
 function emailErrorShow(value) {
   emailError.style.display = "block";
-  emailError.innerHTML = value;
+  emailError.textContent = value;
 }
 
 function passwordErrorShow(value) {
   passwordError.style.display = "block";
-  passwordError.innerHTML = value;
+  passwordError.textContent = value;
 }
 
 var loginBtn = document.querySelector(".loginButton");

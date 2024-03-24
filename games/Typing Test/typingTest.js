@@ -43,10 +43,10 @@ timeEnd();
 
 function loadParagraph() {
     const ranIndex = Math.floor(Math.random() * paragraphs.length);
-    typingText.innerHTML = "";
+    typingText.textContent = "";
     paragraphs[ranIndex].split("").forEach(char => {
         let span = `<span>${char}</span>`
-        typingText.innerHTML += span;
+        typingText.textContent += span;
     });
     typingText.querySelectorAll("span")[0].classList.add("active");
     document.addEventListener("keydown", () => inpField.focus());
@@ -130,7 +130,7 @@ function timeEnd() {
     wpm = wpm < 0 || !wpm || wpm === Infinity ? 0 : wpm;    
 
     if(!updated && wpm > 0) {
-        checkLeaderboard(parseInt(document.getElementById("wpm").innerHTML), "Typing Test", "higher");
+        checkLeaderboard(parseInt(document.getElementById("wpm").textContent), "Typing Test", "higher");
         leaderboardUpdate();
 
         updated = true;
