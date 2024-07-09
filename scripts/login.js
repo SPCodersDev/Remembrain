@@ -147,7 +147,7 @@ function forgotPassword(email) {
     })
     .catch((error) => {
       var errorCode = error.code;
-      var errorMessage = error.message;
+      var errorMessage = errorCode.message;
 
       showPopupError(errorMessage);
     });
