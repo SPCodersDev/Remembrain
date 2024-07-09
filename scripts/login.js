@@ -97,8 +97,8 @@ function signInWithEmailPassword() {
       }, 100);
     })
     .catch((error) => {
-      var errorCode = error.code;
-      var errorMessage = error.message;
+      var errorObj = JSON.parse(error.message);
+      var errorMessage = errorObj.error.message;
 
       passwordErrorShow(errorMessage);
     });
@@ -146,8 +146,9 @@ function forgotPassword(email) {
       }, 5000);
     })
     .catch((error) => {
-      var errorCode = error.code;
-      var errorMessage = errorCode.message;
+
+      var errorObj = JSON.parse(error.message);
+      var errorMessage = errorObj.error.message;
 
       showPopupError(errorMessage);
     });
